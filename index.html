@@ -30,6 +30,7 @@
       var elems = $(ele).find(".publication_preview");
       if (elems.length <= 0) return;    // Nothing to animate here
 
+      console.log(elems[0]);
       if (animation_stage == "start") {
         elems[0].fadeTo( "fast" , 1, function() {});
       } else if (animation_stage == "stop") {
