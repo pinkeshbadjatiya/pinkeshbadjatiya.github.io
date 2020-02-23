@@ -27,7 +27,7 @@
   <script type="text/javascript">
 
     function animate_preview(ele, animation_stage) {
-      var elem = $(ele).find(".publication_preview");
+      var elem = $(ele).find(".two");
       if (elem.length <= 0) return;    // Nothing to animate here
 
       if (animation_stage == "start") {
@@ -90,12 +90,15 @@
           <tr onmouseout="animate_preview(this, 'stop');" onmouseover="animate_preview(this, 'start');">
             <td class="table_publications__left">
               <div class="one">
-                <div class="publication_preview" class="two">
+                <div class="two">
                   <img src='images/aperture_after.jpg'>
                 </div>
                 <img src='images/aperture_before.jpg'>
               </div>
             </td>
+            <script type="text/javascript">
+              animate_preview(this, 'stop');
+            </script>
             <td class="table_publications__right">
               <a href="https://arxiv.org/abs/1910.11336">
                 <papertitle>Deep learning for hate speech detection in tweets</papertitle>
