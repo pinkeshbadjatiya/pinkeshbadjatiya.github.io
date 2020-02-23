@@ -4,6 +4,7 @@ body, td, th, tr, p, a {
 }
 img {
   border-radius: 10px;
+  width: 100%;
 }
 
 a {
@@ -30,6 +31,10 @@ papertitle, experiencetitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700
+}
+
+experiencetitle {
+  font-size: 16px;
 }
 
 name {
