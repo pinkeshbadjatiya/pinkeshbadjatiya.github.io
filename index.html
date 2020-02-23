@@ -27,14 +27,13 @@
   <script type="text/javascript">
 
     function animate_preview(ele, animation_stage) {
-      var elems = $(ele).find(".publication_preview");
-      if (elems.length <= 0) return;    // Nothing to animate here
+      var elem = $(ele).find(".publication_preview");
+      if (elem.length <= 0) return;    // Nothing to animate here
 
-      console.log(elems[0]);
       if (animation_stage == "start") {
-        elems[0].fadeTo( "fast" , 1, function() {});
+        elem.animate({opacity: 1}, 500, function(){});
       } else if (animation_stage == "stop") {
-        elems[0].fadeTo( "fast" , 0, function() {});
+        elem.animate({opacity: 0}, 500, function(){});
       } else {
         console.log("ERROR: Unknown animation stage.")
       }
