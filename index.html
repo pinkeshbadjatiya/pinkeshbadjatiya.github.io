@@ -72,7 +72,7 @@
 
         <!-----------------   Publications ---------------->
         <table class="table_publications"><tbody>
-          <tr onmouseout="aperture_stop()" onmouseover="aperture_start()">
+          <tr onmouseout="aperture_stop();" onmouseover="aperture_start(ele);">
             <td class="table_publications__left">
               <div class="one">
                 <div class="two" id='aperture_image'>
@@ -81,7 +81,8 @@
                 <img src='images/aperture_before.jpg'>
               </div>
               <script type="text/javascript">
-                function aperture_start() {
+                function aperture_start(ele) {
+                  console.log(ele);
                   document.getElementById('aperture_image').style.opacity = "1";
                 }
 
