@@ -37,7 +37,7 @@ name {
   font-size: 32px;
 }
 
-.one {
+itempreview, .one {
   width: 160px;
   height: 160px;
   position: relative;
