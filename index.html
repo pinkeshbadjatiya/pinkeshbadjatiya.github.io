@@ -17,6 +17,7 @@
 
   <meta name="author" content="Pinkesh Badjatiya">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base target="_blank">
 
   <script src="https://kit.fontawesome.com/02fef37810.js" crossorigin="anonymous"></script>     <!-- Font Awesome -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>      <!-- jQuery       -->
@@ -31,9 +32,9 @@
       if (elem.length <= 0) return;    // Nothing to animate here
 
       if (animation_stage == "start") {
-        elem.animate({opacity: 1}, 500, function(){});
+        elem.animate({opacity: 1}, 0, function(){});
       } else if (animation_stage == "stop") {
-        elem.animate({opacity: 0}, 500, function(){});
+        elem.animate({opacity: 0}, 0, function(){});
       } else {
         console.log("ERROR: Unknown animation stage.")
       }
@@ -51,23 +52,23 @@
               <p style="text-align:center">
                 <name>Pinkesh Badjatiya</name>
               </p>
+              <p style="text-align:center">
+                <i class="fas fa-inbox"></i> pinkeshbadjatiya [at] gmail [dot] com |
+                <i class="fas fa-mobile"></i> +91-720-774-6433
+              </p>
+              <p style="text-align:center">
+                <a href="data/PinkeshBadjatiya-cv.pdf">Resume</a> |
+                <a href="data/PinkeshBadjatiya-bio.txt">Biography</a> |
+                <a href="https://scholar.google.co.in/citations?user=9ICSXBsAAAAJ&hl=en">Google Scholar</a> |
+                <a href="https://www.linkedin.com/in/pinkeshbadjatiya/"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                <a href="https://www.github.com/pinkeshbadjatiya/"><i class="fab fa-github"></i> Github</a>
+              <p>
               <p>
                 I am currently working with MDSR Lab as a Machine Learning Research Engineer at <a href="https://adobe.com">Adobe</a>, where I mainly focus on Computer Vision and Reinforcement Learning.
               </p>
               <p>
                 bla. bla. bla.
               </p>
-              <p style="text-align:center">
-                <i class="fas fa-inbox"></i> pinkeshbadjatiya[at]gmail[dot]com &nbsp/&nbsp
-                <a href="data/PinkeshBadjatiya-cv.pdf">Resume</a> &nbsp/&nbsp
-                <a href="data/PinkeshBadjatiya-bio.txt">Biography</a> &nbsp/&nbsp
-              </p>
-              <p>
-                <a href="https://scholar.google.co.in/citations?user=9ICSXBsAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/pinkeshbadjatiya/"><i class="fab fa-linkedin"></i> LinkedIn</a> &nbsp/&nbsp
-                <a href="https://www.github.com/pinkeshbadjatiya/"><i class="fab fa-github"></i> Github</a> &nbsp/&nbsp
-                <i class="fas fa-mobile"></i> +91-720-774-6433
-              <p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
               <a href="images/PinkeshBadjatiya.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/PinkeshBadjatiya_circle.png" class="hoverZoomLink"></a>
@@ -84,6 +85,35 @@
             </td>
           </tr>
         </tbody></table>
+
+
+        <!-----------------   Experience ---------------->
+        <table class="table_experience"><tbody>
+          <tr>
+            <td class="table_experience__left">
+              <div class="one">
+                <img src='images/aperture_before.jpg'>
+              </div>
+            </td>
+            <td class="table_experience__right">
+              <a href="https://summerofcode.withgoogle.com/">
+                <experiencetitle>Google Summer Of Code (GSoC) 2016 Intern</experiencetitle>
+              </a>
+              <br>
+              <em>Apr ’16 - Aug ’16 (4 months)</em>
+              <p>
+                <a href="https://blog.musicbrainz.org/2016/08/23/gsoc-16-listenbrainz-fun/">blog</a>
+              </p>
+              <br>
+              <p>
+                Created a proxy submission Flask API compatible with Last.fm scrobblers.
+                <br>
+                Added scrobbling support for desktop clients with support for tracking currently playing song in Redis.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
 
         <!-----------------   Publications ---------------->
         <table class="table_publications"><tbody>
@@ -113,7 +143,9 @@
               <br>
               <em>WWW</em>, 2017
               <br>
-              <a href="https://arxiv.org/pdf/1706.00188">paper</a> / <a href="https://google.com">poster</a>
+              <p class="resource_links">
+                <a href="https://arxiv.org/pdf/1706.00188">paper</a> / <a href="https://google.com">poster</a>
+              </a>
               <br>
               <p></p>
               <p>Hate speech detection on Twitter is critical for applications like controversial event extraction, building AI chatterbots, content recommendation, and sentiment analysis. Here we provide Deep Learning techniques for Hate speech detection.</p>
@@ -132,9 +164,13 @@
         </tbody></table>
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
           <tr>
-            <td class="table_services__left"><img src="images/cvf.jpg"></td>
+            <td class="table_services__left">
+              <img src="images/cvf.jpg">
+            </td>
             <td width="75%" valign="center">
-              Reviewers, ICWSM 2019, ICON 2019, ALW 2019
+              External Reviewers
+              <br>
+              ICWSM 2019, ICON 2019, ALW 2019
               <br>
             </td>
           </tr>
@@ -143,21 +179,15 @@
               <img src="images/iiith.png" alt="IIIT Hyderabad" style="width:100%;">
             </td>
             <td width="75%" valign="center">
-              <a href="   ">Information Retrieval & Extraction (Monsoon 2018)</a>
+              Information Retrieval & Extraction (Monsoon 2018, Instructor: <a href="https://irel.iiit.ac.in/vasu/">Prof. Vasudeva Varma</a>)
               <br>
+              NLP Applications (Spring 2018, Instructor: <a href="https://scholar.google.co.in/citations?user=sIvMnGQAAAAJ&hl=en">Prof. Manish Shrivastava</a>)
               <br>
-              <a href="   ">NLP Applications (Spring 2018)</a>
+              Statistical Methods in Artificial Intelligence (Monsoon 2017, Instructor: <a href="https://scholar.google.co.in/citations?hl=en&user=PVlBz8oAAAAJ">Prof. Vineet Gandhi</a)
               <br>
+              Data Structures (Spring 2017, <a href="https://www.iiit.ac.in/people/faculty/lini-thomas/">Prof. Lini Teresa Thomas</a>)
               <br>
-              <a href="   ">Statistical Methods in Artificial Intelligence (Monsoon 2017)</a>
-              <br>
-              <br>
-              <a href="   ">Data Structures (Spring 2017)</a>
-              <br>
-              <br>
-              <a href="   ">ITWS-1 (Monsoon 2016)</a>
-              <br>
-              <br>
+              ITWS-1 (Monsoon 2016, <a href="https://www.iiit.ac.in/people/faculty/shatrunjay.rawat"> Prof. Shatrunjay Rawat</a>)
             </td>
           </tr>
         </tbody></table>

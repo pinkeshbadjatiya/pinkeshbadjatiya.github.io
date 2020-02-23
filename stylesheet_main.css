@@ -1,23 +1,19 @@
+body, td, th, tr, p, a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px
+}
+img {
+  border-radius: 10px;
+}
 
 a {
   color: #1772d0;
   text-decoration: none;
 }
-
 a:focus,
 a:hover {
   color: #f09228;
   text-decoration: none;
-}
-
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
 }
 
 strong {
@@ -30,7 +26,7 @@ heading {
   font-size: 22px;
 }
 
-papertitle {
+papertitle, experiencetitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700
@@ -70,6 +66,11 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+
+
+/*
+    CSS Publications section
+*/
 .table_publications {
   width: 100%;
   border: 0px;
@@ -91,6 +92,37 @@ span.highlight {
   vertical-align: middle;
 }
 
+
+/*
+    CSS Experience section
+*/
+
+.table_experience {
+  width: 100%;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.table_experience__left {
+  padding: 20px;
+  width: 25%;
+  vertical-align: middle;
+}
+
+.table_experience__right {
+  padding: 20px;
+  width: 75%;
+  vertical-align: middle;
+}
+
+
+
+/*
+    CSS Services section
+*/
 .table_services__left {
   padding: 0px;
   width: 160px;
