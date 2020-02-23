@@ -86,3 +86,9 @@ span.highlight {
   width: 75%;
   vertical-align: middle;
 }
+
+.table_services__left {
+  padding: 20px;
+  width: 160px;
+  vertical-align: middle;
+}
