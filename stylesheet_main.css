@@ -50,6 +50,7 @@ name {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
+  opacity: 0;
 }
 
 .publication_preview {
@@ -69,9 +70,9 @@ span.highlight {
 
 
 /*
-    CSS Publications section
+    Section CSS
 */
-.table_publications {
+.table_section {
   width: 100%;
   border: 0px;
   border-spacing: 0px;
@@ -80,39 +81,13 @@ span.highlight {
   margin-left: auto;
 }
 
-.table_publications__left {
+.table_section__left {
   padding: 20px;
   width: 25%;
   vertical-align: middle;
 }
 
-.table_publications__right {
-  padding: 20px;
-  width: 75%;
-  vertical-align: middle;
-}
-
-
-/*
-    CSS Experience section
-*/
-
-.table_experience {
-  width: 100%;
-  border: 0px;
-  border-spacing: 0px;
-  border-collapse: separate;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.table_experience__left {
-  padding: 20px;
-  width: 25%;
-  vertical-align: middle;
-}
-
-.table_experience__right {
+.table_section__right {
   padding: 20px;
   width: 75%;
   vertical-align: middle;
