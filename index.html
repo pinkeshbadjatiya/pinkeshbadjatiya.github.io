@@ -24,6 +24,21 @@
   <link rel="stylesheet" type="text/css" href="stylesheet_fonts.css">
   <link rel="stylesheet" type="text/css" href="stylesheet_main.css">
   <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <script type="text/javascript">
+
+    function animate_preview(ele, animation_stage) {
+      var elems = $(ele).find(".publication_preview");
+      if (elems.length <= 0) return;    // Nothing to animate here
+
+      if (animation_stage == "start") {
+        elems[0].fadeTo( "fast" , 1, function() {});
+      } else if (animation_stage == "stop") {
+        elems[0].fadeTo( "fast" , 0, function() {});
+      } else {
+        console.log("ERROR: Unknown animation stage.")
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -72,7 +87,7 @@
 
         <!-----------------   Publications ---------------->
         <table class="table_publications"><tbody>
-          <tr onmouseout="animation_stop(this);" onmouseover="animation_start(this);">
+          <tr onmouseout="animate_preview(this, 'stop');" onmouseover="animate_preview(this, 'start');">
             <td class="table_publications__left">
               <div class="one">
                 <div class="two">
@@ -80,18 +95,6 @@
                 </div>
                 <img src='images/aperture_before.jpg'>
               </div>
-              <script type="text/javascript">
-                function animation_start(ele) {
-                  console.log(ele);
-                  // document.getElementById('aperture_image').style.opacity = "1";
-                  $(ele).find(".publication_preview")[0].style.opacity = "1";
-                }
-                function animation_stop(ele) {
-                  console.log(ele);
-                  // document.getElementById('aperture_image').style.opacity = "0";
-                  $(ele).find(".publication_preview")[0].style.opacity = "0";
-                }
-              </script>
             </td>
             <td class="table_publications__right">
               <a href="https://arxiv.org/abs/1910.11336">
