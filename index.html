@@ -24,6 +24,15 @@
   <link rel="icon" type="image/png" href="images/seal_icon.png">
   <script type="text/javascript">
 
+
+    function animateBox(ele, stage) {
+      if (stage == "start") {
+        $(ele).addClass("border_gradient")
+      } else if (stage == "stop") {
+        $(ele).removeClass("border_gradient")
+      }
+    }
+
     function animate_preview(ele, animation_stage) {
       var elem = $(ele).find(".two");
       if (elem.length <= 0) return;    // Nothing to animate here
@@ -32,8 +41,6 @@
         elem.animate({opacity: 1}, 0, function(){});
       } else if (animation_stage == "stop") {
         elem.animate({opacity: 0}, 0, function(){});
-      } else {
-        console.log("ERROR: Unknown animation stage.")
       }
     }
   </script>
@@ -84,7 +91,7 @@
           </tr>
         </tbody></table>
         <table class="table_section"><tbody>
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__left">
               <itempreview>
                 <!-- <div class="two">
@@ -107,7 +114,7 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__left">
               <itempreview>
                 <img src='images/adobe_before.png'>
@@ -127,7 +134,7 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__left">
               <itempreview>
                 <img src='images/goldmansachs.png'>
@@ -148,7 +155,7 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__left">
               <itempreview>
                 <img src='images/thub.jpg'>
@@ -169,7 +176,7 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__left">
               <itempreview>
                 <img src='images/metabrainz.png'>
@@ -190,7 +197,7 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__left">
               <itempreview>
                 <img src='images/felicity.jpg'>
@@ -209,7 +216,7 @@
               </p>
             </td>
           </tr>
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__left">
               <itempreview>
                 <img src='images/metabrainz.png'>
@@ -385,7 +392,7 @@
           </tr>
         </tbody></table>
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_services__left">
               <img src="images/blank.jpg">
             </td>
@@ -396,7 +403,7 @@
               <br>
             </td>
           </tr>
-          <tr>
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_services__left">
               <img src="images/iiith.png" alt="IIIT Hyderabad" style="width:100%;">
             </td>
