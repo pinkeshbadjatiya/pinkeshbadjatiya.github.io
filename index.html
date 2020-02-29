@@ -33,18 +33,18 @@
       }
     }
 
-    function animate_preview(ele, animation_stage) {
-      var elem = $(ele).find(".two");
-      if (elem.length <= 0) return;    // Nothing to animate here
-
-      if (animation_stage == "start") {
-        elem.animate({opacity: 1}, 0, function(){});
-        animateBox(ele, 'start');
-      } else if (animation_stage == "stop") {
-        elem.animate({opacity: 0}, 0, function(){});
-        animateBox(ele, 'stop');
-      }
-    }
+    // function animate_preview(ele, animation_stage) {
+    //   var elem = $(ele).find(".two");
+    //   if (elem.length <= 0) return;    // Nothing to animate here
+    //
+    //   if (animation_stage == "start") {
+    //     elem.animate({opacity: 1}, 0, function(){});
+    //     animateBox(ele, 'start');
+    //   } else if (animation_stage == "stop") {
+    //     elem.animate({opacity: 0}, 0, function(){});
+    //     animateBox(ele, 'stop');
+    //   }
+    // }
   </script>
 </head>
 
@@ -255,7 +255,7 @@
           </tr>
         </tbody></table>
         <table class="table_section"><tbody>
-          <tr onmouseout="animate_preview(this, 'stop');" onmouseover="animate_preview(this, 'start');">
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__right publications_section__right">
               <papertitle>Multi-label Categorization of Accounts of Sexism using a Neural Framework</papertitle>
               <br>
@@ -275,7 +275,7 @@
             </td>
           </tr>
 
-          <tr onmouseout="animate_preview(this, 'stop');" onmouseover="animate_preview(this, 'start');">
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__right publications_section__right">
               <papertitle>Stereotypical bias removal for hate speech detection task using knowledge-based generalizationss</papertitle>
               <br>
@@ -291,7 +291,7 @@
             </td>
           </tr>
 
-          <tr onmouseout="animate_preview(this, 'stop');" onmouseover="animate_preview(this, 'start');">
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__right publications_section__right">
               <papertitle>Attention-based neural text segmentation</papertitle>
               <br>
@@ -308,7 +308,7 @@
             </td>
           </tr>
 
-          <tr onmouseout="animate_preview(this, 'stop');" onmouseover="animate_preview(this, 'start');">
+          <tr onmouseout="animateBox(this, 'stop');" onmouseover="animateBox(this, 'start');">
             <td class="table_section__right publications_section__right">
               <papertitle>Deep learning for hate speech detection in tweets</papertitle>
               <br>
