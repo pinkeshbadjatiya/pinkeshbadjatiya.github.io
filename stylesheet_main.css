@@ -29,12 +29,8 @@ heading {
 
 papertitle, experiencetitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
-}
-
-experiencetitle {
   font-size: 16px;
+  font-weight: 700
 }
 
 name {
@@ -99,6 +95,13 @@ span.highlight {
   vertical-align: middle;
 }
 
+
+/*
+    Publications Section CSS
+*/
+.publications_section__right {
+  width: 100%;
+}
 
 
 /*
