@@ -149,13 +149,14 @@ span.highlight {
 	--width: 100%;
 	--time: 0.7s;
 	position: relative;
-	display: inline-block;
-	height: 1em;
-	padding: 1em;
-
+	/* display: inline-block; */
+	/* height: 1em; */
+	/* padding: 1em; */
+  border: 10px;
 	color: black;
 	background: #fff;
 	overflow: hidden;
+  border-radius: 10px;
 }
 
 .HOVER text {
