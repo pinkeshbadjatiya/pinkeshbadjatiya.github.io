@@ -4,7 +4,7 @@ body, td, th, tr, p, a {
 }
 img {
   border-radius: 10px;
-  width: 80%;
+  width: 70%;
 }
 
 a {
@@ -76,14 +76,14 @@ span.highlight {
 .table_section {
   width: 100%;
   border: 0px;
-  border-spacing: 0px;
+  border-spacing: 0px 10px;
   border-collapse: separate;
   margin-right: auto;
   margin-left: auto;
 }
 
 .table_section__left {
-  padding: 27px;
+  padding: 10px;
   width: 25%;
   vertical-align: middle;
   text-align: center;
