@@ -1,5 +1,24 @@
-Pinkesh Badjatiya is a Machine Learning Research and Development Engineer at Adobe, where he works on computer
-vision and reinforcement learning. He received a MS by Research degree in Computer Science from International
-Institute of Information Technology Hyderabad (IIIT Hyderabad) in 2019, where he was advised by Vasudeva Varma
-(Dean R&D, IIIT Hyderabad) and Prof. Manish Gupta (Principal Applied Research Scientist, Microsoft), and he
-received a B.Tech in Computer Science from IIIT Hyderabad in 2018.
+Pinkesh Badjatiya is currently a Machine Learning Research and Development Engineer at Adobe, where he works on
+computer vision and reinforcement learning. He received a MS by Research degree in Computer Science from
+International Institute of Information Technology Hyderabad (IIIT Hyderabad) in 2019, where he was advised by
+Vasudeva Varma (Dean R&D, IIIT Hyderabad) and Prof. Manish Gupta (Principal Applied Research Scientist, Microsoft),
+and he received a B.Tech in Computer Science and Engineering from IIIT Hyderabad in 2018.
+
+Pinkesh was a undergraduate researcher at iREL, where I worked on NLP and ML. Some of the topics that he has worked
+on in the domain of NLP include Hate Speech Detection/Mitigation on Social Media, Topic Segmentation, Trust Inference
+and Prediction. He also worked as an open source software developer and participated in Google Summer of Code 2016
+for the organization MetaBrainz. He also served as a mentor in Google Code-In 2017. Pinkesh interned at Goldman Sachs
+in 2018 where he worked on algorithmic constraint optimization. He also recently interned with Adobe where he worked
+on the problem of emergent socio-economic behaviour for multi-agents using reinforcement learning.
+
+Pinkesh has publications in WWW17 (best poster award), ECIR18 (long paper, first author) and WWW19
+(long paper, first author). He received the Dean’s Merit List Award in 3 semesters for academic excellence and Dean’s
+Research Award in 2017 & 2018 for publications in top-tier conferences during his undergraduate studies. He also received
+the ECIR Student Travel Grant 2018, Microsoft Research Travel Grant 2019 and The Web Conference Student Travel Grant 2019
+for attending conferences in Grenoble(Europe) and San Francisco(USA). He also has a strong engineering background as he
+was a System Administrator for the annual college fest of IIIT Hyderabad.
+
+Pinkesh is interested in artificial intelligence, natural language processing, machine learning and computer vision.
+Much of his research was in natural language processing and training deep neural networks to solve complex social problems.
+He is also interested in bringing these recent developments in AI to production systems. He likes to solve puzzles, build
+DIY solutions for everyday tasks and do algorithmic coding in his free time.

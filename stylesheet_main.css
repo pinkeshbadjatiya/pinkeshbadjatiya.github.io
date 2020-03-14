@@ -198,3 +198,7 @@ span.highlight {
 	--angle: 5deg;
 	animation: shake 0.3s;
 }
+
+.CURRENT {
+  background-color: #ffffd0;
+}
