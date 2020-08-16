@@ -10,12 +10,7 @@
   background: #fff;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
 }
-span {
-  position: relative;
-  font-size: 72px;
-  top: 5px;
-  left: -5px;
-}
+
 .ripple-image::after {
   opacity: 0;
   display: flex;
