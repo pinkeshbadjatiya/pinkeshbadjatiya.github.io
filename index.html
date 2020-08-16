@@ -542,7 +542,7 @@
         ele = document.getElementById("image-circle");
         ele2 = $(".ripple-image")[0];
         $(ele2).css("position", "absolute");
-        $(ele2).css("top", parseFloat(ele.getBoundingClientRect().top) + 1.13*parseFloat($(ele).css("height").slice(0,-2))/2 - parseFloat($(ele2).css("height").slice(0,-2))/2);
+        $(ele2).css("top", parseFloat(ele.getBoundingClientRect().top) + parseFloat($(ele).css("height").slice(0,-2))/2 - parseFloat($(ele2).css("height").slice(0,-2))/2);
         $(ele2).css("left", parseFloat(ele.getBoundingClientRect().left)  + parseFloat($(ele).css("width").slice(0,-2))/2 - parseFloat($(ele2).css("width").slice(0,-2))/2);
         $(ele2).css("z-index", -1);
       });
