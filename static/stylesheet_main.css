@@ -4,9 +4,10 @@ th,
 tr,
 p,
 a,
-span {
+span,h1,h2,h3,h4,h5 {
   font-family: "Lato", Verdana, Helvetica, sans-serif;
 }
+
 body,
 td,
 th,
@@ -41,7 +42,6 @@ a:hover {
 }
 
 strong {
-  font-family: "Lato", Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
 
@@ -61,16 +61,14 @@ strong {
   padding: 20px;
 }
 
-papertitle,
-experiencetitle,
-servicetitle {
-  font-family: "Lato", Verdana, Helvetica, sans-serif;
+.papertitle,
+.experiencetitle,
+.servicetitle {
   font-size: 16px;
   font-weight: 700;
 }
 
-name {
-  font-family: "Lato", Verdana, Helvetica, sans-serif;
+.name {
   font-size: 32px;
 }
 
