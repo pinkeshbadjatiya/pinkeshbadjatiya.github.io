@@ -1,8 +1,34 @@
-body, td, th, tr, p, a, span, heading, headingsummary, papertitle, experiencetitle, servicetitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+body,
+td,
+th,
+tr,
+p,
+a,
+span,
+heading,
+headingsummary,
+papertitle,
+experiencetitle,
+servicetitle {
+  font-family: "Lato", Verdana, Helvetica, sans-serif;
 }
-body, td, th, tr, p, a {
-  font-size: 15px
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-size: 15px;
+}
+body {
+  width: 100%;
+  max-width: 950px;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
 }
 img {
   border-radius: 10px;
@@ -20,7 +46,7 @@ a:hover {
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Lato", Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
 
@@ -37,21 +63,24 @@ heading {
 }
 
 headingsummary {
-  padding:20px;
+  padding: 20px;
 }
 
-papertitle, experiencetitle, servicetitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+papertitle,
+experiencetitle,
+servicetitle {
+  font-family: "Lato", Verdana, Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: 700
+  font-weight: 700;
 }
 
 name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Lato", Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
 
-itempreview, .one {
+itempreview,
+.one {
   width: 160px;
   height: 160px;
   position: relative;
@@ -61,9 +90,9 @@ itempreview, .one {
   width: 160px;
   height: 160px;
   position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
   opacity: 0;
 }
 
@@ -72,16 +101,14 @@ itempreview, .one {
 }
 
 .fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
 }
 
 span.highlight {
   background-color: #ffffd0;
 }
-
-
 
 /*
     Section CSS
@@ -108,7 +135,6 @@ span.highlight {
   vertical-align: middle;
 }
 
-
 /*
     Publications Section CSS
 */
@@ -130,85 +156,84 @@ span.highlight {
     CSS for fancy highlights
 */
 .border_gradient {
-  box-shadow: 0 15px 40px rgba(0,0,0,.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
-
 
 /*
     CSS for fancy hover
 */
 @keyframes shake {
-	25% {
-		transform: rotate(calc(var(--angle) * -1));
-	}
+  25% {
+    transform: rotate(calc(var(--angle) * -1));
+  }
 
-	50% {
-		transform: rotate(var(--angle));
-	}
+  50% {
+    transform: rotate(var(--angle));
+  }
 
-	100% {
-		transform: rotate(0deg);
-	}
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .display {
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-gap: 0.1em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0.1em;
 }
 
 .HOVER {
-	--width: 100%;
-	--time: 0.7s;
-	position: relative;
-	/* display: inline-block; */
-	/* height: 1em; */
-	/* padding: 1em; */
+  --width: 100%;
+  --time: 0.7s;
+  position: relative;
+  /* display: inline-block; */
+  /* height: 1em; */
+  /* padding: 1em; */
   border: 10px;
-	color: black;
-	background: #fff;
-	overflow: hidden;
+  color: black;
+  background: #fff;
+  overflow: hidden;
   border-radius: 5px;
 }
 
 .HOVER text {
-	position: relative;
-	z-index: 5;
-	transition: color var(--time);
+  position: relative;
+  z-index: 5;
+  transition: color var(--time);
 }
 
 .HOVER:hover text {
-	color: #fff;
+  color: #fff;
 }
 .HOVER span {
-	border-radius: 100%;
-	position: absolute;
-	display: block;
-	content: "";
-	z-index: 0;
-	width: 0;
-	height: 0;
+  border-radius: 100%;
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 0;
+  width: 0;
+  height: 0;
 
-	background: #000;
-	transform: translate(-50%, -50%);
-	transition: width var(--time), padding-top var(--time);
+  background: #000;
+  transform: translate(-50%, -50%);
+  transition: width var(--time), padding-top var(--time);
 }
 
 .HOVER:hover span {
-	width: calc(var(--width)*2.25);
-	padding-top: calc(var(--width)* 2.25);
+  width: calc(var(--width) * 2.25);
+  padding-top: calc(var(--width) * 2.25);
 }
 
 .HOVER.FLASH:hover text {
-	color: black;
+  color: black;
 }
 .HOVER.FLASH span {
-	background: #ff3b3b;
+  background: #ff3b3b;
 }
 
 .animated {
-	--angle: 5deg;
-	animation: shake 0.3s;
+  --angle: 5deg;
+  animation: shake 0.3s;
 }
 
 .CURRENT {
