@@ -25,6 +25,15 @@ strong {
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  width: 100%;
+  color: grey;
+  vertical-align: middle;
 }
 
 papertitle, experiencetitle {
