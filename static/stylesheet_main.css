@@ -4,12 +4,7 @@ th,
 tr,
 p,
 a,
-span,
-heading,
-headingsummary,
-papertitle,
-experiencetitle,
-servicetitle {
+span {
   font-family: "Lato", Verdana, Helvetica, sans-serif;
 }
 body,
@@ -50,7 +45,7 @@ strong {
   font-size: 14px;
 }
 
-heading {
+.heading {
   font-size: 22px;
   border: 0px;
   border-spacing: 0px;
@@ -62,7 +57,7 @@ heading {
   vertical-align: middle;
 }
 
-headingsummary {
+.headingsummary {
   padding: 20px;
 }
 
