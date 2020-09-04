@@ -46,19 +46,20 @@ strong {
 }
 
 .heading {
-  font-size: 22px;
+  font-size: 25px;
   border: 0px;
   border-spacing: 0px;
   border-collapse: separate;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px;
-  width: 100%;
+  margin: 10px;
+  margin-bottom: 0px;
+  padding: 10px;
   vertical-align: middle;
 }
 
 .headingsummary {
-  padding: 20px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 0px;
 }
 
 .papertitle,
@@ -66,10 +67,14 @@ strong {
 .servicetitle {
   font-size: 16px;
   font-weight: 700;
+  margin: 0px;
+  margin-bottom: 9px;
 }
 
 .name {
   font-size: 32px;
+  text-align: center;
+  margin: 13px;
 }
 
 itempreview,
@@ -179,9 +184,6 @@ span.highlight {
   --width: 100%;
   --time: 0.7s;
   position: relative;
-  /* display: inline-block; */
-  /* height: 1em; */
-  /* padding: 1em; */
   border: 10px;
   color: black;
   background: #fff;
