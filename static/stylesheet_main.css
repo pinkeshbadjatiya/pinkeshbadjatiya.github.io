@@ -1,5 +1,7 @@
-body, td, th, tr, p, a {
+body, td, th, tr, p, a, span, heading, headingsummary, papertitle, experiencetitle, servicetitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+body, td, th, tr, p, a {
   font-size: 15px
 }
 img {
@@ -23,7 +25,6 @@ strong {
 }
 
 heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
   border: 0px;
   border-spacing: 0px;
@@ -32,11 +33,14 @@ heading {
   margin-left: auto;
   padding: 20px;
   width: 100%;
-  color: grey;
   vertical-align: middle;
 }
 
-papertitle, experiencetitle {
+headingsummary {
+  padding:20px;
+}
+
+papertitle, experiencetitle, servicetitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700
