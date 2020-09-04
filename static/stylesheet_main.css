@@ -167,7 +167,7 @@ span.highlight {
 .HOVER:hover text {
 	color: #fff;
 }
-span.HOVER {
+.HOVER span {
 	border-radius: 100%;
 	position: absolute;
 	display: block;
