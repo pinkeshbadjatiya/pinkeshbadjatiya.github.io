@@ -43,6 +43,8 @@ a:hover {
 
 strong {
   font-size: 14px;
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .heading {
