@@ -74,6 +74,11 @@ strong {
   margin-bottom: 9px;
 }
 
+.servicetitle {
+  margin: 5px;
+  margin-left: 0px;
+}
+
 .name {
   font-size: 32px;
   text-align: center;
