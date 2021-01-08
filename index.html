@@ -104,7 +104,7 @@
       $(ele2).css("position", "absolute");
       $(ele2).css("height", parseFloat($(ele).css("height")) * 0.9 + "px");
       $(ele2).css("width", parseFloat($(ele).css("width")) * 0.9 + "px");
-      $(ele2).css("top", parseFloat(ele.getBoundingClientRect().top) + parseFloat($(ele).css("height").slice(0, -2)) / 2 - parseFloat($(ele2).css("height").slice(0, -2)) / 2);
+      $(ele2).css("top", $(window).scrollTop() + parseFloat(ele.getBoundingClientRect().top) + parseFloat($(ele).css("height").slice(0, -2)) / 2 - parseFloat($(ele2).css("height").slice(0, -2)) / 2);
       $(ele2).css("left", parseFloat(ele.getBoundingClientRect().left) + parseFloat($(ele).css("width").slice(0, -2)) / 2 - parseFloat($(ele2).css("width").slice(0, -2)) / 2);
       $(ele2).css("z-index", -1);
       $(ele2).css("display", "flex");
