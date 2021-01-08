@@ -85,6 +85,13 @@
 
     var onImageLoad = function () {
       ele = document.getElementById("image-circle");
+
+      // Move image to top if small screen
+      console.log($(document.getElementById("col-image")).css("width"));      
+      console.log($(document.getElementById("col-text")).css("width"));      
+      console.log("done...");
+
+      
       ele2 = $(".ripple-image")[0];
       $(ele2).css("position", "absolute");
       $(ele2).css("height", parseFloat($(ele).css("height")) * 0.95 + "px");
@@ -106,7 +113,7 @@
   <table>
     <tbody>
       <tr>
-        <td style="padding:2.5%;width:65%;max-width:35%;">
+        <td id='col-text' style="padding: 1.5em; width:65%; max-width:35%;">
           <h4 class="name">Pinkesh Badjatiya</h4>
           <p style="text-align:center">
             <i class="far fa-envelope"></i> pinkeshbadjatiya [at] gmail [dot] com |
@@ -157,7 +164,7 @@
             drink, and sleep.
           </p>
         </td>
-        <td style="padding:2.5%;width:45%;max-width:35%">
+        <td id='col-image' style="padding:1.5em; width:45%; max-width:35%">
           <a href="images/PinkeshBadjatiya1.png">
             <img onLoad="onImageLoad()" style="width:100%;max-width:100%" id="image-circle" alt="profile photo"
               src="images/PinkeshBadjatiya1_circle.png" class="hoverZoomLink">
