@@ -120,12 +120,11 @@ span.highlight {
     Section CSS
 */
 .table_section {
-  width: 100%;
   border: 0px;
   border-spacing: 0px 10px;
   border-collapse: separate;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 12px;
+  margin-left: 1px;
 }
 
 .table_section__left {
