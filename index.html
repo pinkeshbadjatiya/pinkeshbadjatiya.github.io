@@ -84,14 +84,18 @@
     // }
 
     var onImageLoad = function () {
-      ele = document.getElementById("image-circle");
-
       // Move image to top if small screen
-      console.log($(document.getElementById("col-image")).css("width"));      
-      console.log($(document.getElementById("col-text")).css("width"));      
-      console.log("done...");
+      if (screen.width < 700) {
+        var newParent = document.getElementById('col-image-mobile');
+        var oldParent = document.getElementById('col-image');
+        while (oldParent.childNodes.length > 0) {
+            newParent.appendChild(oldParent.childNodes[0]);
+        }
+        $(newParent).show();
+        newParent.id = "col-image";
+      }
 
-      
+      var ele = document.getElementById("image-circle");
       ele2 = $(".ripple-image")[0];
       $(ele2).css("position", "absolute");
       $(ele2).css("height", parseFloat($(ele).css("height")) * 0.95 + "px");
@@ -119,6 +123,8 @@
             <i class="far fa-envelope"></i> pinkeshbadjatiya [at] gmail [dot] com |
             <i class="fas fa-mobile-alt"></i> +91-720-774-6433
           </p>
+          <div id="col-image-mobile" style="padding:1.5em; width:70%; text-align: center; margin: auto; display: none;">
+          </div>
           <p style="text-align:center">
             <a href="data/PinkeshBadjatiya-cv.pdf"><i class="fas fa-file-pdf"></i> Resume</a> |
             <!-- <a href="data/PinkeshBadjatiya-bio.txt">Biography</a> | -->
