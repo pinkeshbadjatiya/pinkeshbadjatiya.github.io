@@ -241,3 +241,8 @@ span.highlight {
 .CURRENT {
   background-color: #ffffd0;
 }
+
+ul {
+  margin: 0px;
+  padding-left: 0px;
+}
