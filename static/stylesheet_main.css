@@ -65,6 +65,7 @@ strong {
   margin-top: 0px;
 }
 
+.patenttitle,
 .papertitle,
 .experiencetitle,
 .servicetitle {
@@ -143,10 +144,28 @@ span.highlight {
 /*
     Publications Section CSS
 */
-/* .publications_section__right {
+/*
+
+.publications_section__right {
 }
 .publications_section__left {
-} */
+}
+
+*/
+
+
+/*
+    Patents Section CSS
+*/
+/*
+
+.patents_section__right {
+}
+.patents_section__left {
+}
+
+*/
+
 
 /*
     CSS Services section
