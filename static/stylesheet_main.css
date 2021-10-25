@@ -265,3 +265,8 @@ ul {
   margin: 0px;
   padding-left: 0px;
 }
+
+.red_highlight {
+  color: red;
+  font-weight: bold;
+}
