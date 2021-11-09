@@ -57,6 +57,7 @@ strong {
   padding: 15px;
   vertical-align: middle;
   background-color: #f3f3f3;
+  filter: drop-shadow(3px 3px 3px #b3b0b0);
 }
 
 .headingsummary {
