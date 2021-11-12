@@ -142,6 +142,20 @@ span.highlight {
   vertical-align: middle;
 }
 
+
+
+/*
+    Awards Section CSS
+*/
+
+.awards_section__right {
+  padding: 0px;
+  border-left: solid;
+  padding-left: 22px;
+  border-radius: 0px;
+}
+
+
 /*
     Publications Section CSS
 */
