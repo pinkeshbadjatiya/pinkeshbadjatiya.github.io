@@ -161,6 +161,7 @@ span.highlight {
   border-left: 3px solid;
   padding-left: 15px;
   border-radius: 0px;
+  width: 90%;
 }
 
 
@@ -182,9 +183,14 @@ span.highlight {
 */
 /*
 
-.patents_section__right {
-}
+
 .patents_section__left {
+  width: 10%
+}
+
+.patents_section__right {
+  padding: 12px;
+  width: 90%;
 }
 
 */
