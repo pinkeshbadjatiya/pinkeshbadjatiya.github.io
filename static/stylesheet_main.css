@@ -152,8 +152,6 @@ span.highlight {
   padding-right: 10px;
   width: 10%;
 }
-
-
 .awards_section__right {
   padding: 0px;
   border-left: 3px solid;
@@ -161,7 +159,19 @@ span.highlight {
   border-radius: 0px;
   width: 90%;
 }
-
+awardTitle {
+  font-weight: bolder;
+}
+awardDescription {
+  margin: 0px;
+  margin-top: 2px;
+  font-style: italic;
+  font-size: small;
+}
+awardDescription::before {
+    content: "\a";
+    white-space: pre;
+}
 
 /*
     Publications Section CSS
