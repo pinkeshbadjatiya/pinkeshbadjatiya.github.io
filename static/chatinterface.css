@@ -11,7 +11,7 @@
 }
 
 #cb-flow {
-    padding-bottom: 80px;
+    padding-bottom: 10px;
 }
 
 .cb-bubble.bot {
@@ -23,9 +23,9 @@
     border: 1px dashed blue;
 }
 
-.cb-human {
+.cb-human .cb-icon {
     background-position: 2px 2px;
-    background-size: 30px;
+    background-size: 35px;
 }
 
 .answer {

@@ -1450,6 +1450,15 @@
     // }
 
 
+    chat.scrollTo = function (position) {
+      chat.scrollToOld = chat.scrollTo;
+      if (position == 'end') {
+          scrollToBottomOfChat();
+      } else {
+          chat.scrollToOld(position);
+      }
+    };
+
     $(document).ready(function () {
 
         //Add Text saying 'Hi there!', with a typing delay of 500ms
