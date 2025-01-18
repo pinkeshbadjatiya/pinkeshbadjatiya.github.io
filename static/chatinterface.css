@@ -31,3 +31,16 @@
     width: 24%;
     margin: 14px;
 }
+
+
+/* Styles for mobile devices */ @media (max-width: 600px) {
+    #chatbot {
+        height: 50%;
+        width: 95%;
+    }
+
+    #cb-flow>.cb-inner {
+        padding-top: 2px;
+    }
+
+}
