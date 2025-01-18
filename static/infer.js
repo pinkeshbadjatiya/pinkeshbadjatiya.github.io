@@ -1,3 +1,28 @@
+function displayAnswer(answer) {
+    const answerElement = document.createElement("div");
+    answerElement.classList.add("answer");
+    answerElement.textContent = answer;
+
+    const body = document.querySelector("body");
+    body.appendChild(answerElement);
+}
+
+
+function askDonna(userQuestion) {
+    const bodyHTML = document.querySelector('body').innerHTML;
+    const processedText = cleanHTML(bodyHTML);
+    console.log(processedText);
+
+    const userQuestion = "What are Pinkesh's top achievements in AI?";
+    const websiteContext = processedText;
+
+    // once you have the answer, call a function to display it on the website
+    askDonnaTheAssistant(userQuestion, websiteContext).then(text => {
+        console.log(text);
+        displayAnswer(text);
+    });
+}
+
 function cleanHTML(html) {
     // Create a temporary DOM element to process the HTML string
     const tempDiv = document.createElement("div");
@@ -83,7 +108,7 @@ const generatePrompt = (userQuestion, websiteContent) => {
 }
 
 
-async function fetchMeaningOfLife(userQuestion, websiteContent) {
+async function askDonnaTheAssistant(userQuestion, websiteContent) {
     const url = "https://openrouter.ai/api/v1/chat/completions";
     const headers = {
         // "Authorization": "Bearer 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",
@@ -137,3 +162,5 @@ function decryptToken(encryptedToken, secretKey) {
     } 
     return String.fromCharCode(...originalTokenArray); 
 }
+
+
