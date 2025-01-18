@@ -1,7 +1,7 @@
 #chatbot{
-    width: 50%;
+    width: 20%;
     height: 50%;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     right: 0px;
     background: grey;
