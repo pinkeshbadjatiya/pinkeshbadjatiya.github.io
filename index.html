@@ -1456,18 +1456,38 @@
         // chat.addBubble({ type: 'text', value: 'Ask DonnaAI anything about Pinkesh?', class: 'bot', delay: 500 }, function () {
 
           //After initial bubble is presented, ask the user for her name
-          chat.addBubble({ type: 'text', value: 'You can ask any question, AI is guaranteed to be neural & factual! For e.g, Is Pinkesh proficient in Machine Learning?', class: 'bot', delay: 0 });
+
+        chat.addBubble({ type: 'text', value: 'You can ask any question, AI is guaranteed to be neural & factual! For e.g, Is Pinkesh proficient in Machine Learning?', class: 'bot', delay: 0 });
+        scrollToBottomOfChat();
+
+        //Show the input container
+        chat.showInput(function(input){
+
+          chat.addBubble({ type: 'text', value: input, class: 'human', delay: 0 });
           scrollToBottomOfChat();
+          askDonnaTheAssistant(input, chat);
 
-          //Show the input container
-          chat.showInput(function(input){
+        });
 
-            chat.addBubble({ type: 'text', value: input, class: 'human', delay: 0 });
-            scrollToBottomOfChat();
-            askDonnaTheAssistant(input, chat);
+        // add a placeholder to the input container
+        var inputBox = document.getElementById("cb-input-container").children[0];
+        inputBox.placeholder = "Ask DonnaAI anything about Pinkesh?";
 
-          });
-        // });
+        // Show or hide the chat conversation when the user clicks on the input container
+        inputBox.addEventListener("click", function() {
+          $("#cb-flow").show(200);
+        });
+
+        // Hide the chat conversation when the user clicks outside the input container
+        function handleClickOutside(event) {
+          const div = document.getElementById('chatbot');
+          if (!div.contains(event.target)) {
+              // alert('Clicked outside the div!'); // You can replace this alert with any other JavaScript code
+              $("#cb-flow").hide(200);
+            }
+          }
+        document.addEventListener('click', handleClickOutside);
+
     });
 
   </script>
