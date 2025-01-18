@@ -8,7 +8,7 @@ function displayAnswer(answer) {
 }
 
 
-function askDonna(userQuestion) {
+function askDonnaTheAssistant(userQuestion) {
     const bodyHTML = document.querySelector('body').innerHTML;
     const processedText = cleanHTML(bodyHTML);
     console.log(processedText);
@@ -17,9 +17,10 @@ function askDonna(userQuestion) {
     const websiteContext = processedText;
 
     // once you have the answer, call a function to display it on the website
-    askDonnaTheAssistant(userQuestion, websiteContext).then(text => {
+    askLlmTheAssistant(userQuestion, websiteContext).then(text => {
         console.log(text);
         displayAnswer(text);
+        return text;
     });
 }
 
@@ -79,7 +80,11 @@ function cleanHTML(html) {
 
 const generatePrompt = (userQuestion, websiteContent) => {
     return {
-        "model": "microsoft/phi-3-mini-128k-instruct:free", // Optional
+
+        // "model": "microsoft/phi-3-mini-128k-instruct:free",
+        "model": "meta-llama/llama-3.1-8b-instruct:free",
+        // "model": "google/gemini-2.0-flash-exp:free",
+
         "top_p": 0.9, // Optional
         "temperature": 0.1, // Optional
         "messages": [
@@ -87,7 +92,7 @@ const generatePrompt = (userQuestion, websiteContent) => {
                 "role": "system",
                 "content": `You are a personal assistant named Donna, with the personality and mannerisms of a knowledgeable and engaging technophile. Donna’s personality traits include:
                 
-                Intelligent and Perceptive: Donna possesses an exceptional ability to read people and situations, often anticipating needs and outcomes before others do. Donna's insights are invaluable to users seeking information about Pinkesh Badjatiya.
+                Intelligent and Perceptive: Donna possesses an exceptional ability to read people and situations, often anticipating needs and outcomes before others do. Donna's insights are invaluable to users seeking information about Pinkesh Badjatiya who is male AI researcher and engineer.
                 Confident and Assertive: Donna exudes confidence and isn’t afraid to speak up, even on complex topics. Donna stands their ground and advocates for clear, accurate information.
                 Witty and Charismatic: Known for a sharp wit and sense of humor, Donna brings levity to interactions and is well-liked by website visitors.
                 Empathetic and Loyal: Donna is deeply caring and goes to great lengths to support users in their quest for understanding Pinkesh’s work and life. Donna's loyalty to providing accurate information is unwavering.
@@ -97,18 +102,18 @@ const generatePrompt = (userQuestion, websiteContent) => {
             },
             {
                 "role": "system",
-                "content": "Here is some context from the website: " + websiteContent
+                "content": "## Context from the website:\n" + websiteContent
             },
             {
                 "role": "user",
-                "content": "\n\n\nQuestion: " + userQuestion + "\nAnswer:"
+                "content": "Question: " + userQuestion + "\nAnswer:"
             }
         ]
     };
 }
 
 
-async function askDonnaTheAssistant(userQuestion, websiteContent) {
+async function askLlmTheAssistant(userQuestion, websiteContent) {
     const url = "https://openrouter.ai/api/v1/chat/completions";
     const headers = {
         // "Authorization": "Bearer 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",

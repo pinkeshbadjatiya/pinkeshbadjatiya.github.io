@@ -1450,7 +1450,7 @@
 
     function processChatQuestion(input) {
         //As input arrives, ask Donna and present the input
-        var answer = askDonna(input);
+        var answer = askDonnaTheAssistant(input);
         chat.addBubble({ type: 'text', value: answer, class: 'bot', delay: 0 });
         scrollToBottom("cb-flow");
         // chat.showInput(function(input){
@@ -1464,8 +1464,8 @@
 
     $(document).ready(function () {
 
-        //Add Text saying 'Hi there!', with a typing delay of 1000ms
-        chat.addBubble({ type: 'text', value: 'What to as DonnaAI anything about Pinkesh?', class: 'bot', delay: 1000 }, function () {
+        //Add Text saying 'Hi there!', with a typing delay of 500ms
+        chat.addBubble({ type: 'text', value: 'Ask DonnaAI anything about Pinkesh?', class: 'bot', delay: 500 }, function () {
 
           //After initial bubble is presented, ask the user for her name
           chat.addBubble({ type: 'text', value: 'You can ask any question, AI is guaranteed to be neural & factual! For e.g, Is Pinkesh proficient in Machine Learning?', class: 'bot', delay: 0 });
