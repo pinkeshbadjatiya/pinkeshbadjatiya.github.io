@@ -7,10 +7,10 @@
 //     body.appendChild(answerElement);
 // }
 
-function processTextForDisplay(text) {
-    text = text.replace(/\n/g, "<br/>"); // .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
-    return text;
-}
+// function processTextForDisplay(text) {
+//     text = text.replace(/\n/g, "<br/>"); // .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+//     return text;
+// }
 
 function scrollToBottomOfChat() {
     var all_divs = document.querySelectorAll(".cb-segment");
@@ -29,7 +29,7 @@ function askDonnaTheAssistant(userQuestion, chatObj) {
     // once you have the answer, call a function to display it on the website
     askLlmTheAssistant(userQuestion, websiteContext).then(text => {
         console.log(text);
-        text = processTextForDisplay(text);
+        // text = processTextForDisplay(text);
         chatObj.addBubble({ type: 'text', value: text, class: 'bot', delay: 0 });
         scrollToBottomOfChat();
 
