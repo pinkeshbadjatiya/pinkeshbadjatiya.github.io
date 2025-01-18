@@ -81,7 +81,7 @@ const generatePrompt = (userQuestion, websiteContent) => {
 }
 
 
-async function fetchMeaningOfLife() {
+async function fetchMeaningOfLife(userQuestion, websiteContent) {
     const url = "https://openrouter.ai/api/v1/chat/completions";
     const headers = {
         "Authorization": "Bearer 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",
