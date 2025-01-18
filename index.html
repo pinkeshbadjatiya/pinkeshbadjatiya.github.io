@@ -1407,6 +1407,8 @@
   <div id="chatbot"></div>
 
   <script>
+    var chat = chatUI(d3.select('#chatbot'));
+
     const animatedClassName = "animated";
     const ELEMENTS = document.querySelectorAll(".HOVER");
     const ELEMENTS_SPAN = [];
@@ -1447,7 +1449,6 @@
     }
 
     $(document).ready(function () {
-        var chat = chatUI(d3.select('#chatbot'));
 
         //Add Text saying 'Hi there!', with a typing delay of 1000ms
         chat.addBubble({ type: 'text', value: 'What to as DonnaAI anything about Pinkesh?', class: 'bot', delay: 1000 }, function () {
@@ -1462,6 +1463,8 @@
             var answer = askDonna(input);
 
             chat.addBubble({ type: 'text', value: answer, class: 'human', delay: 0 });
+
+            chat.scrollTo("end");
 
             scrollToBottom("chatbot");
 
