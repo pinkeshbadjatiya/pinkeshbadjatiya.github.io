@@ -13,7 +13,7 @@ function askDonna(userQuestion) {
     const processedText = cleanHTML(bodyHTML);
     console.log(processedText);
 
-    const userQuestion = "What are Pinkesh's top achievements in AI?";
+    // const userQuestion = "What are Pinkesh's top achievements in AI?";
     const websiteContext = processedText;
 
     // once you have the answer, call a function to display it on the website
