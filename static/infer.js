@@ -84,12 +84,15 @@ const generatePrompt = (userQuestion, websiteContent) => {
 async function fetchMeaningOfLife(userQuestion, websiteContent) {
     const url = "https://openrouter.ai/api/v1/chat/completions";
     const headers = {
-        "Authorization": "Bearer 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",
+        // "Authorization": "Bearer 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",
         "HTTP-Referer": "pinkeshbadjatiya.github.io",
         "X-Title": "Pinkesh Badjatiya Homepage"
     };
     const data = generatePrompt(userQuestion, websiteContent);
 	console.log(data);
+
+    const token = decryptToken('IAQFGAQGSQoKTw4WRxdFRBtTB1JXXlMXXktWUlkACQUWXB9XUFhWCVVHCkpYBwUGUgUXXE5UAVkGWAJFCEoCVFFQCFFNC0lRVVVTWwVMDEk=', "badjatiya")
+    headers["Authorization"] = `${token}`;
 
     try {
         const response = await fetch(url, {
@@ -112,4 +115,23 @@ async function fetchMeaningOfLife(userQuestion, websiteContent) {
     } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
     }
+}
+
+
+function encryptToken(token, secretKey) { 
+    const tokenArray = []; 
+    for (let i = 0; i < token.length; i++) { 
+        tokenArray.push(token.charCodeAt(i) ^ secretKey.charCodeAt(i % secretKey.length)); 
+    } 
+    return btoa(String.fromCharCode(...tokenArray)); 
+}
+
+
+function decryptToken(encryptedToken, secretKey) { 
+    const decodedString = atob(encryptedToken); 
+    const originalTokenArray = []; 
+    for (let i = 0; i < decodedString.length; i++) { 
+        originalTokenArray.push(decodedString.charCodeAt(i) ^ secretKey.charCodeAt(i % secretKey.length)); 
+    } 
+    return String.fromCharCode(...originalTokenArray); 
 }
