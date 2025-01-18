@@ -1448,6 +1448,20 @@
       div.scrollTop = div.scrollHeight;
     }
 
+    function processChatQuestion(input) {
+        //As input arrives, ask Donna and present the input
+        var answer = askDonna(input);
+        chat.addBubble({ type: 'text', value: answer, class: 'bot', delay: 0 });
+        scrollToBottom("cb-flow");
+        // chat.showInput(function(input){
+        //     chat.scrollTo("end");
+
+        //     scrollToBottom("chatbot");
+        //     processChatQuestion(input);
+        // });
+
+    }
+
     $(document).ready(function () {
 
         //Add Text saying 'Hi there!', with a typing delay of 1000ms
@@ -1459,14 +1473,11 @@
           //Show the input container
           chat.showInput(function(input){
 
-            //As input arrives, ask Donna and present the input
-            var answer = askDonna(input);
+            processChatQuestion(input);
 
-            chat.addBubble({ type: 'text', value: answer, class: 'human', delay: 0 });
+            // chat.scrollTo("end");
 
-            chat.scrollTo("end");
-
-            scrollToBottom("chatbot");
+            // scrollToBottom("chatbot");
 
             //Hide the input container
             // chat.hideInput();
