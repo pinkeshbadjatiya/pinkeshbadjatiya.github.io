@@ -6,6 +6,12 @@
 //     const body = document.querySelector("body");
 //     body.appendChild(answerElement);
 // }
+
+function processTextForDisplay(text) {
+    text = text.replace(/\n/g, "<br/>") .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+    return text;
+}
+
 function scrollToBottomOfChat() {
     var all_divs = document.querySelectorAll(".cb-segment");
     var lastDiv = all_divs[all_divs.length - 1];
@@ -23,7 +29,7 @@ function askDonnaTheAssistant(userQuestion, chatObj) {
     // once you have the answer, call a function to display it on the website
     askLlmTheAssistant(userQuestion, websiteContext).then(text => {
         console.log(text);
-        // displayAnswer(text);
+        text = processTextForDisplay(text);
         chatObj.addBubble({ type: 'text', value: text, class: 'bot', delay: 0 });
         scrollToBottomOfChat();
 
