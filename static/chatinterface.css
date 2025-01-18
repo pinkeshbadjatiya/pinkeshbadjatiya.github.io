@@ -4,9 +4,14 @@
     position: fixed;
     bottom: 0px;
     right: 0px;
-    background: grey;
+    background: #f7fbfffc;
     border-radius: 8px;
     margin: 6px;
+    padding-top: 15px;    
+}
+
+.cb-bubble.bot {
+    border-radius: 8px;
 }
 
 .answer {

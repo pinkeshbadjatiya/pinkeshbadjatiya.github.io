@@ -101,7 +101,7 @@ const generatePrompt = (userQuestion, websiteContent) => {
             },
             {
                 "role": "user",
-                "content": userQuestion
+                "content": "\n\n\nQuestion: " + userQuestion + "\nAnswer:"
             }
         ]
     };
