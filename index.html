@@ -1484,7 +1484,7 @@
 
         // Show or hide the chat conversation when the user clicks on the input container
         inputBox.addEventListener("click", function() {
-          $("#cb-flow").show(200);
+          $("#cb-flow").show(50);
         });
 
         // Hide the chat conversation when the user clicks outside the input container
@@ -1492,7 +1492,7 @@
           const div = document.getElementById('chatbot');
           if (!div.contains(event.target)) {
               // alert('Clicked outside the div!'); // You can replace this alert with any other JavaScript code
-              $("#cb-flow").hide(200);
+              $("#cb-flow").hide(50);
             }
           }
         document.addEventListener('click', handleClickOutside);

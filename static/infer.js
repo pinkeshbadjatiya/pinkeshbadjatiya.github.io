@@ -30,10 +30,10 @@ function askDonnaTheAssistant(userQuestion, chatObj) {
     askLlmTheAssistant(userQuestion, websiteContext).then(text => {
         console.log(text);
         // text = processTextForDisplay(text);
-        var converter = new showdown.Converter(),
-        htmlText = converter.makeHtml(text);
-        console.log(htmlText);
-        chatObj.addBubble({ type: 'text', value: htmlText, class: 'bot', delay: 0 });
+        // var converter = new showdown.Converter(),
+        // htmlText = converter.makeHtml(text);
+        // console.log(htmlText);
+        chatObj.addBubble({ type: 'text', value: text, class: 'bot', delay: 0 });
         scrollToBottomOfChat();
 
         return text;
