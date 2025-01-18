@@ -1,16 +1,13 @@
-// function displayAnswer(answer) {
-//     const answerElement = document.createElement("div");
-//     answerElement.classList.add("answer");
-//     answerElement.textContent = answer;
-
-//     const body = document.querySelector("body");
-//     body.appendChild(answerElement);
-// }
-
-// function processTextForDisplay(text) {
+function cleanLlmOutputForDisplay(llm_output) {
+        // var converter = new showdown.Converter(),
+        // htmlText = converter.makeHtml(text);
 //     text = text.replace(/\n/g, "<br/>"); // .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
-//     return text;
-// }
+
+    // strip to remove trailing spaces
+    llm_output = llm_output.trim();
+    return llm_output;
+}
+
 
 function scrollToBottomOfChat() {
     var all_divs = document.querySelectorAll(".cb-segment");
@@ -29,10 +26,8 @@ function askDonnaTheAssistant(userQuestion, chatObj) {
     // once you have the answer, call a function to display it on the website
     askLlmTheAssistant(userQuestion, websiteContext).then(text => {
         console.log(text);
-        // text = processTextForDisplay(text);
-        // var converter = new showdown.Converter(),
-        // htmlText = converter.makeHtml(text);
-        // console.log(htmlText);
+        text = cleanLlmOutputForDisplay(text);
+        console.log(cleanLlmOutputForDisplay);
         chatObj.addBubble({ type: 'text', value: text, class: 'bot', delay: 0 });
         scrollToBottomOfChat();
 
@@ -119,7 +114,7 @@ Professional and Resourceful: Highly skilled in their role, Donna is indispensab
             },
             {
                 "role": "user",
-                "content": "Your task is to act as a personal assistant, answering any questions based on the given context from Pinkesh Badjatiya's website. Please use the context to inform your responses and provide accurate and helpful information. Be concise, direct, and confident in your communication, just like Donna would be. Always generate the output plain English and in maximum 3-4 sentences.\n\nQuestion: " + userQuestion + "\nAnswer:"
+                "content": "Your task is to act as a personal assistant, answering any questions based on the given context from Pinkesh Badjatiya's website. Please use the context to inform your responses and provide accurate and helpful information. Be concise, direct, and confident in your communication, just like Donna would be. Always generate the output plain English and in maximum 3-4 sentences. You MUST highlight the major facts or achievements using the <b> tag.\n\nQuestion: " + userQuestion + "\nAnswer: "
             }
         ]
     };
