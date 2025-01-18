@@ -1404,6 +1404,8 @@
       </tr>
     </tbody>
   </table>
+  <div id="chatbot"></div>
+
   <script>
     const animatedClassName = "animated";
     const ELEMENTS = document.querySelectorAll(".HOVER");
@@ -1439,13 +1441,42 @@
       });
     });
 
+    function scrollToBottom(divID) {
+      const div = document.getElementById(divID);
+      div.scrollTop = div.scrollHeight;
+    }
 
     $(document).ready(function () {
+        var chat = chatUI(d3.select('#chatbot'));
+
+        //Add Text saying 'Hi there!', with a typing delay of 1000ms
+        chat.addBubble({ type: 'text', value: 'What to as DonnaAI anything about Pinkesh?', class: 'bot', delay: 1000 }, function () {
+
+          //After initial bubble is presented, ask the user for her name
+          chat.addBubble({ type: 'text', value: 'You can ask any question, AI is guaranteed to be neural & factual! For e.g, Is Pinkesh proficient in Machine Learning?', class: 'bot', delay: 0 });
+
+          //Show the input container
+          chat.showInput(function(input){
+
+            //As input arrives, ask Donna and present the input
+            var answer = askDonna(input);
+
+            chat.addBubble({ type: 'text', value: answer, class: 'human', delay: 0 });
+
+            scrollToBottom("chatbot");
+
+            //Hide the input container
+            // chat.hideInput();
+
+            //And welcome the user with her name
+            // chat.addBubble({ type: 'text', value: 'Hello '+input, class: 'bot', delay: 500 });
+
+          });
+        });
     });
 
   </script>
 
-  <div id="chatbot"></div>
 </body>
 
 </html>
