@@ -1460,7 +1460,30 @@
       }
     };
 
+    function hideChatView() {
+      $("#cb-flow").hide(50);
+      $("#donnaHeader").hide(50);
+      document.getElementById("chatbot").style.background = "transparent";
+      document.getElementById("chatbot").style.boxShadow = "";
+      
+    }
+
+    function showChatView() {
+      $("#cb-flow").show(50);
+      $("#donnaHeader").show(50);
+      document.getElementById("chatbot").style.background = "";
+      document.getElementById("chatbot").style.boxShadow = "0px 0px 13px #888888";
+    }
+
     $(document).ready(function () {
+
+        // Create the h1 element
+        const h1 = document.createElement("h1");
+        h1.setAttribute("id", "donnaHeader");
+        h1.textContent = "DonnaAI";
+        const containerDiv = document.getElementById("chatbot");
+        containerDiv.appendChild(h1);
+
 
         //Add Text saying 'Hi there!', with a typing delay of 500ms
         // chat.addBubble({ type: 'text', value: 'Ask DonnaAI anything about Pinkesh?', class: 'bot', delay: 500 }, function () {
@@ -1484,7 +1507,7 @@
 
         // Show or hide the chat conversation when the user clicks on the input container
         inputBox.addEventListener("click", function() {
-          $("#cb-flow").show(50);
+          showChatView();
         });
 
         // Hide the chat conversation when the user clicks outside the input container
@@ -1492,10 +1515,14 @@
           const div = document.getElementById('chatbot');
           if (!div.contains(event.target)) {
               // alert('Clicked outside the div!'); // You can replace this alert with any other JavaScript code
-              $("#cb-flow").hide(50);
+              hideChatView();
             }
           }
         document.addEventListener('click', handleClickOutside);
+
+
+        // Hide the chat window by default
+        hideChatView();
 
     });
 

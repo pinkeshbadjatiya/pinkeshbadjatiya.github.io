@@ -10,6 +10,12 @@
     padding-top: 15px;    
 }
 
+h1#donnaHeader {
+    background: #e7efe6;
+    padding: 14px;
+    padding-left: 23px;
+}
+
 #cb-flow {
     padding-bottom: 10px;
 }
