@@ -1,3 +1,15 @@
+#chatbot-container {
+    width: 20%;
+    height: 60vh;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: #f7fbfffc;
+    border-radius: 8px;
+    margin: 6px;
+    padding-top: 15px;    
+}
+
 #chatbot{
     width: 20%;
     height: 60vh;
@@ -10,7 +22,7 @@
     padding-top: 15px;    
 }
 
-h1#donnaHeader {
+#donnaHeader {
     background: #e7efe6;
     padding: 14px;
     padding-left: 23px;
@@ -47,6 +59,10 @@ h1#donnaHeader {
 
 /* Styles for mobile devices */
 @media (max-width: 600px) {
+    #chatbot-container {
+        height: 50%;
+        width: 95%;
+    }
     #chatbot {
         height: 50%;
         width: 95%;
