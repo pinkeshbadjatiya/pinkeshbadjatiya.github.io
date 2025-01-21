@@ -5,6 +5,13 @@ function cleanLlmOutputForDisplay(llm_output) {
 
     // strip to remove trailing spaces
     llm_output = llm_output.trim();
+
+    // Replace **text** with <strong>text</strong>
+    llm_output = llm_output.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+    // Replace \n with <br>
+    llm_output = llm_output.replace(/\n/g, '<br>');
+
     return llm_output;
 }
 
