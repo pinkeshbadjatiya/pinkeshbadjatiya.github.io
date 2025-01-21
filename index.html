@@ -1407,6 +1407,7 @@
     </tbody>
   </table>
   <div id="chatbot-container">
+    <h2 id="donnaHeader">Donna AI</h2>
     <div id="chatbot"></div>
   </div>
 
@@ -1465,16 +1466,16 @@
     function hideChatView() {
       $("#chatbot").hide();
       $("#donnaHeader").hide();
-      document.getElementById("chatbot").style.background = "transparent";
-      document.getElementById("chatbot").style.boxShadow = "";
+      document.getElementById("chatbot-container").style.background = "transparent";
+      document.getElementById("chatbot-container").style.boxShadow = "";
       
     }
 
     function showChatView() {
       $("#chatbot").show();
       $("#donnaHeader").show();
-      document.getElementById("chatbot").style.background = "";
-      document.getElementById("chatbot").style.boxShadow = "0px 0px 13px #888888";
+      document.getElementById("chatbot-container").style.background = "";
+      document.getElementById("chatbot-container").style.boxShadow = "0px 0px 13px #888888";
     }
 
     $(document).ready(function () {
