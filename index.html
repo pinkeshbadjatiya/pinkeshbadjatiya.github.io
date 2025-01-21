@@ -1407,6 +1407,12 @@
     </tbody>
   </table>
   <div id="chatbot"></div>
+  <div id="cb-input-temporary" style="display: block;">
+    <div id="cb-input-container-temporary">
+      <input type="text" placeholder="Ask DonnaAI anything about Pinkesh?">
+    </div>
+    <button>+</button>
+  </div>
 
   <script>
     var chat = chatUI(d3.select('#chatbot'));
@@ -1461,16 +1467,18 @@
     };
 
     function hideChatView() {
-      $("#cb-flow").hide(50);
-      $("#donnaHeader").hide(50);
+      $("#chatbot").hide();
+      $("#donnaHeader").hide();
+      $("#cb-input-temporary").show();
       document.getElementById("chatbot").style.background = "transparent";
       document.getElementById("chatbot").style.boxShadow = "";
       
     }
 
     function showChatView() {
-      $("#cb-flow").show(50);
-      $("#donnaHeader").show(50);
+      $("#chatbot").show();
+      $("#donnaHeader").show();
+      $("#cb-input-temporary").hide();
       document.getElementById("chatbot").style.background = "";
       document.getElementById("chatbot").style.boxShadow = "0px 0px 13px #888888";
     }
