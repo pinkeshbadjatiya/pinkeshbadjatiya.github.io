@@ -57,6 +57,10 @@
     margin: 14px;
 }
 
+.cb-bubble p {
+    padding: 0px;
+}
+
 
 /* Styles for mobile devices */
 @media (max-width: 600px) {
