@@ -1407,6 +1407,7 @@
     </tbody>
   </table>
   <div id="chatbot"></div>
+  <div id="chatbotTemporary"></div>
   <div id="cb-input-temporary" style="display: block;">
     <div id="cb-input-temporary-container">
       <input type="text" placeholder="Ask DonnaAI anything about Pinkesh?">
@@ -1469,7 +1470,7 @@
     function hideChatView() {
       $("#chatbot").hide();
       $("#donnaHeader").hide();
-      $("#cb-input-temporary").show();
+      $("#chatbotTemporary").show();
       document.getElementById("chatbot").style.background = "transparent";
       document.getElementById("chatbot").style.boxShadow = "";
       
@@ -1478,7 +1479,7 @@
     function showChatView() {
       $("#chatbot").show();
       $("#donnaHeader").show();
-      $("#cb-input-temporary").hide();
+      $("#chatbotTemporary").hide();
       document.getElementById("chatbot").style.background = "";
       document.getElementById("chatbot").style.boxShadow = "0px 0px 13px #888888";
     }
