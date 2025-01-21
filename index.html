@@ -1407,13 +1407,6 @@
     </tbody>
   </table>
   <div id="chatbot"></div>
-  <div id="chatbotTemporary"></div>
-  <div id="cb-input-temporary" style="display: block;">
-    <div id="cb-input-temporary-container">
-      <input type="text" placeholder="Ask DonnaAI anything about Pinkesh?">
-    </div>
-    <button>+</button>
-  </div>
 
   <script>
     var chat = chatUI(d3.select('#chatbot'));
@@ -1470,7 +1463,6 @@
     function hideChatView() {
       $("#chatbot").hide();
       $("#donnaHeader").hide();
-      $("#chatbotTemporary").show();
       document.getElementById("chatbot").style.background = "transparent";
       document.getElementById("chatbot").style.boxShadow = "";
       
@@ -1479,7 +1471,6 @@
     function showChatView() {
       $("#chatbot").show();
       $("#donnaHeader").show();
-      $("#chatbotTemporary").hide();
       document.getElementById("chatbot").style.background = "";
       document.getElementById("chatbot").style.boxShadow = "0px 0px 13px #888888";
     }
@@ -1524,14 +1515,16 @@
           const div = document.getElementById('chatbot');
           if (!div.contains(event.target)) {
               // alert('Clicked outside the div!'); // You can replace this alert with any other JavaScript code
-              hideChatView();
+              // hideChatView();
+              
             }
           }
         document.addEventListener('click', handleClickOutside);
 
 
         // Hide the chat window by default
-        hideChatView();
+        // hideChatView();
+        showChatView();
 
     });
 
