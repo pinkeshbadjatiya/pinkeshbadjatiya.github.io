@@ -22,24 +22,14 @@ function scrollToBottomOfChat() {
     lastDiv.scrollIntoView();
 }
 
-// function fetch(url) {
-//     return new Promise((resolve, reject) => {
-//         const xhr = new XMLHttpRequest();
-//         xhr.open("GET", url);
-//         xhr.onload = () => resolve(xhr.responseText);
-//         xhr.onerror = () => reject(xhr.statusText);
-//         xhr.send();
-//     });
-// }
 
 function askDonnaTheAssistant(userQuestion, chatObj) {
-    /*
     const bodyHTML = document.querySelector('body').innerHTML;
-    const processedText = cleanHTML(bodyHTML);
+    var processedText = cleanHTML(bodyHTML);
     console.log(processedText);
-    */
 
     // Read the text from the file "data/PinkeshBadjatiya__Resume.txt"
+    /*
     var processedText = "";
     const file_name = "/data/Pinkesh_Badjatiya___Resume.txt";
     fetch(file_name).then(response => {
@@ -48,6 +38,7 @@ function askDonnaTheAssistant(userQuestion, chatObj) {
             // console.log(text);
             processedText = text;
         });
+    */
 
     console.log(processedText);
 
