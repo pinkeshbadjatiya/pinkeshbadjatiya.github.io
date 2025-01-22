@@ -15,8 +15,8 @@
 
 #chatbot{
     width: 20%;
-    height: 60vh;
-    max-height: 600px;
+    height: 65vh;
+    /* max-height: 600px; */
     position: fixed;
     bottom: 0px;
     right: 0px;
@@ -32,11 +32,13 @@
     padding: 14px;
     padding-left: 23px;
     margin: 0px;
+    position: relative;
+    z-index: 50;
 }
 
 #cb-flow {
     padding-bottom: 10px;
-    height: 88%;
+    height: 64vh;
 }
 
 .cb-bubble.bot {
