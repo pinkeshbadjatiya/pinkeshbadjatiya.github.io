@@ -23,11 +23,11 @@
     background: #f7fbfffc;
     border-radius: 8px;
     margin: 6px;
-    padding-top: 15px;    
+    padding-top: 0px;
 }
 
 #donnaHeader {
-    max-height: 100px;
+    /* max-height: 100px; */
     background: #e7efe6;
     padding: 14px;
     padding-left: 23px;
@@ -36,6 +36,7 @@
 
 #cb-flow {
     padding-bottom: 10px;
+    height: 88%;
 }
 
 .cb-bubble.bot {
