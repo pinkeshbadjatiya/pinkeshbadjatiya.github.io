@@ -22,12 +22,36 @@ function scrollToBottomOfChat() {
     lastDiv.scrollIntoView();
 }
 
+function fetch(url) {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onload = () => resolve(xhr.responseText);
+        xhr.onerror = () => reject(xhr.statusText);
+        xhr.send();
+    });
+}
+
 function askDonnaTheAssistant(userQuestion, chatObj) {
+    /*
     const bodyHTML = document.querySelector('body').innerHTML;
     const processedText = cleanHTML(bodyHTML);
     console.log(processedText);
+    */
 
-    // const userQuestion = "What are Pinkesh's top achievements in AI?";
+    // Read the text from the file "data/PinkeshBadjatiya__Resume.txt"
+    const processedText = "";
+    const file_name = "/data/PinkeshBadjatiya__Resume.txt";
+    fetch(file_name).then(response => {
+            return response;
+        }).then(text => {
+            // console.log(text);
+            processedText = text;
+        });
+
+    console.log(processedText);
+
+
     const websiteContext = processedText;
 
     // once you have the answer, call a function to display it on the website
