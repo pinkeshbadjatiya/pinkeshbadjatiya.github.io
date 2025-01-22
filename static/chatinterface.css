@@ -16,7 +16,7 @@
 #chatbot{
     width: 20%;
     height: 65vh;
-    /* max-height: 600px; */
+    max-height: 650px;
     position: fixed;
     bottom: 0px;
     right: 0px;
