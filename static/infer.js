@@ -41,7 +41,7 @@ function askDonnaTheAssistant(userQuestion, chatObj) {
 
     // Read the text from the file "data/PinkeshBadjatiya__Resume.txt"
     const processedText = "";
-    const file_name = "/data/PinkeshBadjatiya__Resume.txt";
+    const file_name = "/data/Pinkesh_Badjatiya___Resume.txt";
     fetch(file_name).then(response => {
             return response;
         }).then(text => {
