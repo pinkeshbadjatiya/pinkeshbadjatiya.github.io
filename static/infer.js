@@ -23,7 +23,7 @@ function scrollToBottomOfChat() {
 }
 
 
-function askDonnaTheAssistant(userQuestion, chatObj) {
+function askDonnaTheAssistant(userQuestion, chatHistory, chatObj) {
 
     /*
     // Read the text from the website
@@ -49,7 +49,7 @@ function askDonnaTheAssistant(userQuestion, chatObj) {
     const websiteContext = processedText;
 
     // once you have the answer, call a function to display it on the website
-    askLlmTheAssistant(userQuestion, websiteContext).then(text => {
+    askLlmTheAssistant(userQuestion, websiteContext, chatHistory).then(text => {
         console.log(text);
         text = cleanLlmOutputForDisplay(text);
         console.log(cleanLlmOutputForDisplay);
@@ -114,7 +114,7 @@ function cleanHTML(html) {
 }
 
 
-const generatePrompt = (userQuestion, websiteContent) => {
+const generatePrompt = (userQuestion, websiteContent, chatHistory) => {
     return {
 
         // "model": "microsoft/phi-3-mini-128k-instruct:free",
@@ -139,21 +139,21 @@ const generatePrompt = (userQuestion, websiteContent) => {
             },
             {
                 "role": "user",
-                "content": "Your task is to act as a personal assistant, answering any questions based on the given context from Pinkesh Badjatiya's website. Please use the context to inform your responses and provide accurate and helpful information. Be concise, direct, and confident in your communication, just like Donna would be. **You have to STRICTLY answer based on the context above.** Always generate the output plain English and in maximum 3-4 sentences. You MUST highlight the major facts or achievements using the <b> tag.\n\nQuestion: " + userQuestion + "\nAnswer: "
+                "content": "Your task is to act as a personal assistant, answering any questions based on the given context from Pinkesh Badjatiya's website. Please use the context to inform your responses and provide accurate and helpful information. Be concise, direct, and confident in your communication, just like Donna would be. **You have to STRICTLY answer based on the context above.** Always generate the output plain English and in maximum 3-4 sentences. You MUST highlight the major facts or achievements using the <b> tag.\n\n" + chatHistory + "\nQuestion: " + userQuestion + "\nAnswer: "
             }
         ]
     };
 }
 
 
-async function askLlmTheAssistant(userQuestion, websiteContent) {
+async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
     const url = "https://openrouter.ai/api/v1/chat/completions";
     const headers = {
         // "Authorization": "Bearer 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",
         "HTTP-Referer": "pinkeshbadjatiya.github.io",
         "X-Title": "Pinkesh Badjatiya Homepage"
     };
-    const data = generatePrompt(userQuestion, websiteContent);
+    const data = generatePrompt(userQuestion, websiteContent, chatHistory);
 	console.log(data);
 
     const token = decryptToken('IAQFGAQGSQoKTw4WRxdFRBtTB1JXXlMXXktWUlkACQUWXB9XUFhWCVVHCkpYBwUGUgUXXE5UAVkGWAJFCEoCVFFQCFFNC0lRVVVTWwVMDEk=', "badjatiya")

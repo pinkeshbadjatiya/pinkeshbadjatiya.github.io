@@ -1481,6 +1481,26 @@
       document.getElementById("chatbot-container").style.boxShadow = "0px 0px 13px #888888";
     }
 
+    function getChatHistory() {
+      var elements = document.querySelectorAll('.bubble-ctn-bot, .bubble-ctn-human');
+
+      // Only keep last 4 messages
+      if (elements.length > 4) {
+        elements = Array.prototype.slice.call(elements, -4);
+      }
+      
+      var chatHistory = "";
+      elements.forEach(function (element) {
+        if (element.getAttribute("class").endsWith("bot") == true) {
+          chatHistory += "Answer: " + element.innerHTML.replace(/<[^>]*>?/gm, '') + "\n";
+        } else {
+          chatHistory += "Question: " + element.innerHTML.replace(/<[^>]*>?/gm, '') + "\n";
+        }
+      });
+
+      return chatHistory;
+    }
+
     $(document).ready(function () {
 
         // Create the h1 element
@@ -1503,7 +1523,7 @@
         chat.showInput(function(input){
           chat.addBubble({ type: 'text', value: input, class: 'human', delay: 0 });
           scrollToBottomOfChat();
-          askDonnaTheAssistant(input, chat);
+          askDonnaTheAssistant(input, chatHistory, chat);
 
         });
 
