@@ -170,7 +170,9 @@ async function askLlmTheAssistant(userQuestion, websiteContent) {
         });
 
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            // throw new Error('Network response was not ok');
+            console.log('ERROR: Network response was not ok');
+            return "Sorry, I am unable to answer your question at the moment. Please try again later.";
         }
 
         const jsonResponse = await response.json();
