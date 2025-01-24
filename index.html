@@ -1407,7 +1407,10 @@
     </tbody>
   </table>
   <div id="chatbot-container">
-    <h2 id="donnaHeader">Donna AI</h2>
+    <h2 id="donnaHeader">
+      <i class="fa fa-hat-wizard" title="I am Donna, your AI assitant to help you with any queries about Pinkesh! Think of me as your trusty sidekick, always ready with neutral and factual information. I promise I won't over-hype Pinkesh's abilities—I'll just help you navigate through his resume with ease. Let's get started!"></i>
+      &nbsp;&nbsp;Donna AI
+    </h2>
     <div id="chatbot"></div>
   </div>
 
@@ -1531,6 +1534,11 @@
         // Hide the chat window by default
         // hideChatView();
         showChatView();
+
+        // After 3 seconds, try to scroll the chat window 
+        setTimeout(function() {
+          chat.scrollTo("end");
+        }, 3000);
 
     });
 

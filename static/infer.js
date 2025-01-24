@@ -24,21 +24,24 @@ function scrollToBottomOfChat() {
 
 
 function askDonnaTheAssistant(userQuestion, chatObj) {
+
+    /*
+    // Read the text from the website
     const bodyHTML = document.querySelector('body').innerHTML;
     var processedText = cleanHTML(bodyHTML);
     console.log(processedText);
+    */
 
     // Read the text from the file "data/PinkeshBadjatiya__Resume.txt"
-    /*
     var processedText = "";
-    const file_name = "/data/Pinkesh_Badjatiya___Resume.txt";
+    const file_name = "/data/Pinkesh_Badjatiya___grounding.txt";
     fetch(file_name).then(response => {
             return response;
         }).then(text => {
             // console.log(text);
             processedText = text;
         });
-    */
+
 
     console.log(processedText);
 

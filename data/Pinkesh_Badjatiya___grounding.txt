@@ -1,0 +1,90 @@
+# Pinkesh Badjatiya Bio
+I am currently working as an Applied Scientist 2 with the Search Technology Center India (STCI) AI Products team at Microsoft (R&D) working on relevance and ranking systems for the PeopleAlsoAsk Experience. I work on large-scale NLP recommendation systems that show relevant questions to Bing users while maximizing user engagement & experience. I work on mining signals from massive interaction data at Bing scale, building large-scale ML models, utilizing Machine Learning to distill information, and deploying them with Web-ready latency (<10ms).
+
+Prior to this, I worked with the Media and Data Science Research (MDSR) Lab - a BU embedded research group in Digital Marketing at Adobe as a Machine Learning Researcher and Engineer 2, where I mainly focused on Computer Vision and Reinforcement Learning.
+
+I am interested in artificial intelligence, natural language processing, machine learning, and computer vision. Much of my research is in Deep Reinforcement Learning (Deep-RL), Natural Language Processing (NLP), and training Deep Neural Networks to solve complex social problems. I am also interested in bringing these recent developments in AI to production systems.
+
+I finished my MS by Research in Machine Learning with a focus in the domain of Information Retrieval and Extraction (IRE) from IIIT Hyderabad under the guidance of Prof. Vasudeva Varma (former Dean R&D, IIIT Hyderabad) and Prof. Manish Gupta (Microsoft, India). My thesis was encompassing the realm of Hate Speech Detection and Bias Mitigation in neural networks. Insights from my research work subsequently resulted in the formation of Project ANGEL which later garnered the Google AI/ML Research Award 2020. Other projects I worked on during my studies include Trust Inference in Social Network, Document Segmentation, Text Summarization and Project Sexism. I also completed my B.Tech with Honours in Computer Science and Engineering from IIIT Hyderabad.
+
+I feel fortunate to have worked with some of the amazing folks from both Academia and Machine Learning Research. Just to thank a few folks; Manish Gupta, Georgios Theocharous, Balaji Krishnamurthy, Jayakumar Subramanian, Mausoom Sarkar, Niyati Chhaya, and Vasudeva Verma.
+
+I spend most of my time reading books. I also spend my spare time pursuing my childhood passion; following Astronomy, General Relativity, and Quantum Mechanics. Occasionally, I play Table Tennis (TT) and play piano (Youtube).
+
+
+# Current Work Experience
+- Applied Scientist 2 at Microsoft (Sept ’21 - Current (3 years)) - Working with the PeopleAlsoAsk Team @Bing, STCI where I focus on Building, Productionizing and Scaling Machine Learning systems for Bing users while maximizing DAU & User Experience, with Web-ready latency (<10ms).
+
+## Core Impact:
+- Performed various LLMs Quantization & Optimization techniques to reduce latencies and increase throughputs.
+- Proposed, Trained, Optimized & Distilled the Relevance Model, then quantized on FPGA architecture for <10ms latency. In production, ONLY Relevance Model for PeopleAlsoAsk@Bing, Shipped with 100% Bing Coverage.
+- Productionized various Quality models – FPGA Relevance Model, Rel-Rank Model, QnA Generation Model (offline), Video QnA Generation, Realtime QnA Retrieval – aggregating to Bing DAU gains of 0.1+%.
+- Shipped the ranker “Dynamic Ranker” – Improved engagement by 10+%, Provides quality data for all the LLM modelling efforts; Provides 50% of the online ranking signal; Shipped w/ 60% Bing Coverage.
+- Shipped new experience “Video QnA” – Created Model to generate QnA from Video content, Collaborated with IIT Madras, Shipped to production w/ 2% Bing coverage.
+- Shipped new experience “Build Your Own Prompt” for Copilot on Bing – Manually Reformulated Queries reduced by -0.24%, Lowest bad transfers % to Copilot, ensuring user-success, Filed a patent, Picked up by SEO Tabloids.
+- Built a real-time QnA Generation SLM Model (25ms @6 tok latency). Optimized model using distillation, quantization, architecture pruning, and compression.
+- Helped with the backend for other new experiences like Health QnA, QnA Rewrite, Relevance v2, etc.
+- Top performer every year, Huge Impact on all KPIs – DAU, Coverage, Engagement, Experience etc.
+
+## Team Impact:
+- Team Champ for POC & New Idea Execution from 0 to 1. Performed POCs for experiences like People Also Watch, Copilot on Whatsapp, Copilot Quality for Indic Languages, etc.
+- Leading a team of 2 applied scientists and 3 engineers, vested in their success.
+- Additional Responsibilities include – Admin for STCI-wide GPU cluster, Regular talks as part of SLM v-Team etc.
+- Internal talks – SLMs, Prompt Engineering, Modelling & Distillation, etc.
+- External talk & workshop – Prompt Engineering in AI Applications @TakeLessons, World of LLMs & Prompt Engineering @BITS GOA.
+- Mentored 3+ internship projects.
+
+
+# Past Work Experience
+1. Machine Learning Researcher at Adobe (June ’19 - Sept ’21 (2 yrs 4 months))
+- Researcher @Media and Data Science Research (MDSR) Lab - a BU embedded research group in Digital Marketing at Adobe.
+- Few-Shot Learning to 1-shot learning for banner tagging for websites; (abstract, human, non-human) for personalizing the banner ad on website; Obtained ∼ 94% Top-1 accuracy and deployed the model to production; Project for Samsung.
+- Image Editing w/ GAN: Image editing & interpolation using GANs; worked on GAN framework (extended StyleGAN-2) for generating interpolations across attributes like gender, age, smile, and eyeglasses; proposed a new interpolation strategy; collaborated with core Adobe Photoshop team to replace the existing StyleGan-2 Model; Filed a patent.
+- Major Research Projects: Multi-modal Image Retrieval, Semantic Face Editing, Action Spaces in RL, Supervised/Unsupervised Representation Learning, GANs, Multi-modal Bundle Recommendation, Adversarial NAS, Semantic Similarity, Multi-Agent Reinforcement Learning, Policy Optimization, Logo Detector.
+- Accepted 1 center-stage breakout talk, 2 posters and 1 tutorial in the Adobe Tech Summit (Virtual due to Covid-19).
+- Submitted 6 papers and 10 patents in US and other countries.
+- Mentored 12+ internship projects with 17+ student interns.
+- Built recommendation model for “Related Conversations” feature on https://community.adobe.com. Increased CTR by 38%, Reduced Help Forum visits by 30% (99% t-test confidence). Lead a team of 2 engineers and collaborated with the respective Product Team Engineers.
+- Published a tech-blog on Adobe Tech Blog http://bit.ly/magix-adobe-tech as part of Adobe India Hackathon.
+2. **Machine Learning Research Intern at Adobe** (Jan 2019 - April 2019) - Working towards solving social dilemmas for Multi-agent setting using Deep Reinforcement Learning using Model-based Value functions. Extended a full-time offer.
+3. **Computer Vision Engineer at Fujitsu Labs** (Remote, Freelance) (December 2019 - April 2021)
+4. **Software Engineer Intern at Goldman Sachs** (May 2018 - July 2018) - Designed an algorithmic solution using constraint optimization in Java and Scala. Used TDD with OOP concepts and Design patterns. Performed error analysis and deployed to production. Extended a full-time offer.
+5. **Data Analytics/Site Reliability Engineer Intern at T-Hub Homepage** (Sep 2017 - Mar 2018) - Developed analytics from the reports produced by ~280 co-working startups incubated at T-Hub. Analyzed the user traffic flows to improve the site experience and generate weekly statistics for internal analysis using Google Analytics and Python.
+6. **Google Code-In Mentor at Google Code-In / MetaBrainz Homepage** (Nov 2016 - Jan 2017) - Mentored students working on the ListenBrainz project. Tasks involved creating tasks of varying difficulty levels and evaluating their submissions.
+7. **System Administrator and Organizer at Felicity Website** (Jul 2016 - Jun 2017) - Felicity Threads is the annual technical fest of IIIT Hyderabad. I was part of the team responsible for maintaining the contest portals and the website for the fest. I was also a problem setter for the event Break-In CTF.
+8. **Google Summer Of Code (GSoC) Intern at Google Summer of Code / Blog@MetaBrainz** (April 2016 - August 2016) - Created a proxy submission Flask API compatible with Last.fm scrobblers. Added scrobbling support for desktop clients with support for tracking currently playing song in Redis.
+
+
+# Awards/Honors/Mentions
+2023 - Patent on BURP being filed in US
+2022 - 10 patents being filed in US and other countries.
+2021 - Promoted to SDE 2 @Adobe in 6 months; ML Engineer 2 @Adobe (in 12 months).
+2020 - Featured in Adobe Tech Blog! -- Blog.
+2020 - Project ANGEL | Google AI/ML Research Award 2020 - Insights from my undergraduate research work subsequently resulted in the formation of Project ANGEL at IIIT Hyderabad which later garnered the Google AI/ML Research Award 2020 to my advisor.
+2019 - TheWebConf Student travel grant for attending TheWebConf ’19 conference in US.
+2019 - Microsoft Research (MSR) Travel Grant for attending TheWebConf ’19 conference in US.
+2018 - Dean’s Research Award - Awarded in semesters Monsoon 17 & Monsoon 18 for obtaining research publications during undergraduate studies.
+2018 - Dean’s Merit List for academic excellence - Selected in Dean’s List in semesters Monsoon 15, Monsoon 17 & Spring 18. Awarded to Top 5% of the batch.
+2018 - ECIR-Grenoble Travel Grant for attending ECIR’18 conference in France.
+2017 - Ranked 3rd in the Big Data Challenge - Department of Higher & Technical Education Government of Rajasthan, India. 1741 teams participated from all across India. Awarded prize by the Vasundhara Raje, Chief Minister of Rajasthan.
+2017 - Our work on HateSpeech featured in 10+ media outlets! -- Blog.
+2017 - Best Poster Presentation Award at WWW'17 (Perth, Australia).
+2016 - Featured in MetaBrainz Blog!! -- Blog.
+2016 - ACM-ICPC Chennai Regionals 2016 - My team SourceCode ranked 80th in the 2016 ACM-ICPC Asia Chennai Regional Contest, 67th in the Asia-Chennai '16 Online Round and 107th in the Asia Amritapuri '16 Online Round.
+2015 - Ranked 2nd in Microsoft Code.Fun.Do Hackathon.
+2014 - AIR 3313/1.4 million (All India Rank) in JEE-Advance.
+2014 - AIR 7044/1.4 million (All India Rank) in JEE-Mains (State Rank-258).
+
+# Notable Publications
+- SAC: Semantic Attention Composition for Text-Conditioned Image Retrieval (WACV, 2022)
+- SHERLock: Self-Supervised Hierarchical Event Representation Learning (ICPR, 2022)
+- TRACE: Transform Aggregate and Compose Visiolinguistic Representations for Image Search with Text Feedback (Under Review)
+- Status-quo policy gradient in Multi-Agent Reinforcement Learning (DeepRL Workshop NeurIPS 2021, Extended Abstract in AAMAS 2020)
+- Leveraging Style and Content features for Text Conditioned Image Retrieval (CVFAD - CVPR 2021)
+- MixBoost: Synthetic Oversampling with Boosted Mixup for Handling Extreme Imbalance (ICDM 2020)
+- Multi-label Categorization of Accounts of Sexism using a Neural Framework (EMNLP, 2019)
+- Stereotypical bias removal using Knowledge-based Generalization for Abuse Detection Task (TheWebConf, 2019)
+- Attention-based Neural Text Segmentation (ECIR, 2018)
+- Deep Learning for Hate Speech Detection in Tweets (WWW, 2017)
+  - Received Best Poster Presentation Award at WWW’17, Perth, Australia
+  - Our work received significant print media coverage: https://bit.ly/hatespeech-iiith-best-poster
