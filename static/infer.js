@@ -32,32 +32,30 @@ function askDonnaTheAssistant(userQuestion, chatHistory, chatObj) {
     console.log(processedText);
     */
 
-    // Read the text from the file "data/PinkeshBadjatiya__Resume.txt"
+    // Read the text from the file "data/PinkeshBadjatiya___grounding.txt" and once we get a response, call the askLlmTheAssistant function
     var processedText = "";
     const file_name = "/data/Pinkesh_Badjatiya___grounding.txt";
-    fetch(file_name).then(response => {
-            return response;
-        }).then(text => {
-            // console.log(text);
-            processedText = text;
+    fetch(file_name)
+        .then(response => response.text())
+        .then(text => {
+            processedText = text
+
+            console.log(processedText);
+
+            const websiteContext = processedText;
+
+            // once you have the answer, call a function to display it on the website
+            askLlmTheAssistant(userQuestion, websiteContext, chatHistory).then(text => {
+                console.log(text);
+                text = cleanLlmOutputForDisplay(text);
+                console.log(cleanLlmOutputForDisplay);
+                chatObj.addBubble({ type: 'text', value: text, class: 'bot', delay: 0 });
+                scrollToBottomOfChat();
+
+                return text;
+            });
         });
 
-
-    console.log(processedText);
-
-
-    const websiteContext = processedText;
-
-    // once you have the answer, call a function to display it on the website
-    askLlmTheAssistant(userQuestion, websiteContext, chatHistory).then(text => {
-        console.log(text);
-        text = cleanLlmOutputForDisplay(text);
-        console.log(cleanLlmOutputForDisplay);
-        chatObj.addBubble({ type: 'text', value: text, class: 'bot', delay: 0 });
-        scrollToBottomOfChat();
-
-        return text;
-    });
 }
 
 function cleanHTML(html) {
