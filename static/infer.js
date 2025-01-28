@@ -115,11 +115,11 @@ function cleanHTML(html) {
 const generatePrompt = (userQuestion, websiteContent, chatHistory) => {
     return {
 
-        // "model": "meta-llama/llama-3.1-8b-instruct:free",
+        "model": "meta-llama/llama-3.1-8b-instruct:free",
         //// "model": "microsoft/phi-3-mini-128k-instruct:free",
         //// "model": "google/gemini-2.0-flash-exp:free",
 
-        "model": "Meta-Llama-3.1-8B-Instruct",
+        // "model": "Meta-Llama-3.1-8B-Instruct",
 
         "top_p": 0.9, // Optional
         "temperature": 0.1, // Optional
@@ -147,8 +147,8 @@ const generatePrompt = (userQuestion, websiteContent, chatHistory) => {
 
 
 async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
-    // const url = "https://openrouter.ai/api/v1/chat/completions";
-    const url = "https://api.sambanova.ai/v1/chat/completions";
+    const url = "https://openrouter.ai/api/v1/chat/completions";
+    // const url = "https://api.sambanova.ai/v1/chat/completions";
     const headers = {
         // "Authorization": "Bearer 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",
         "HTTP-Referer": "pinkeshbadjatiya.github.io",
@@ -157,8 +157,8 @@ async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
     const data = generatePrompt(userQuestion, websiteContent, chatHistory);
 	console.log(data);
 
-    // const token = decryptToken('IAQFGAQGSQoKTw4WRxdFRBtTB1JXXlMXXktWUlkACQUWXB9XUFhWCVVHCkpYBwUGUgUXXE5UAVkGWAJFCEoCVFFQCFFNC0lRVVVTWwVMDEk=', "badjatiya")
-    const token = decryptToken('IAQFGAQGSUECWgBcUllARBtWAFlJXgdHX1RYUAMFR1IQCEtWAAQBWllEUQ==', 'badjatiya');
+    const token = decryptToken('IAQFGAQGSQoKTw4WRxdFRBtTB1JXXlMXXktWUlkACQUWXB9XUFhWCVVHCkpYBwUGUgUXXE5UAVkGWAJFCEoCVFFQCFFNC0lRVVVTWwVMDEk=', "badjatiya")
+    // const token = decryptToken('IAQFGAQGSUECWgBcUllARBtWAFlJXgdHX1RYUAMFR1IQCEtWAAQBWllEUQ==', 'badjatiya');
     headers["Authorization"] = `${token}`;
 
     try {
