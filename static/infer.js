@@ -115,7 +115,8 @@ function cleanHTML(html) {
 const generatePrompt = (userQuestion, websiteContent, chatHistory) => {
     return {
 
-        "model": "meta-llama/llama-3.1-8b-instruct:free",
+	    "model": "openchat/openchat-7b:free",
+        // "model": "meta-llama/llama-3.1-8b-instruct:free",
         //// "model": "microsoft/phi-3-mini-128k-instruct:free",
         //// "model": "google/gemini-2.0-flash-exp:free",
 
