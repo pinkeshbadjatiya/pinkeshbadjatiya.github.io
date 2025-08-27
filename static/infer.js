@@ -196,9 +196,9 @@ const generatePromptGemini = (userQuestion, websiteContent, chatHistory) => {
 
 
 async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
-    const url = "https://openrouter.ai/api/v1/chat/completions";
+    // const url = "https://openrouter.ai/api/v1/chat/completions";
     // const url = "https://api.sambanova.ai/v1/chat/completions";
-	// const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
+	const url = "https://generativelanguage.googleapis.com/v1beta/models/gemma-3-4b-it:generateContent";
 
 	const headers = {
         // "Authorization": "Bearer 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",
@@ -208,8 +208,8 @@ async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
         "X-Title": "Pinkesh Badjatiya Homepage"
     };
     
-	const data = generatePrompt(userQuestion, websiteContent, chatHistory);
-	// const data = generatePromptGemini(userQuestion, websiteContent, chatHistory);
+	// const data = generatePrompt(userQuestion, websiteContent, chatHistory);
+	const data = generatePromptGemini(userQuestion, websiteContent, chatHistory);
 	
 	console.log(data);
 
@@ -219,14 +219,14 @@ async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
 	//////////////////////////////////////
 	//// Open Router
 	//////////////////////////////////////
-	const token = decryptToken('IAQFGAQGSQoKTw4WRxdFRBtTB1JXXlMXXktWUlkACQUWXB9XUFhWCVVHCkpYBwUGUgUXXE5UAVkGWAJFCEoCVFFQCFFNC0lRVVVTWwVMDEk=', "badjatiya")
-    headers["Authorization"] = `${token}`;
+	// const token = decryptToken('IAQFGAQGSQoKTw4WRxdFRBtTB1JXXlMXXktWUlkACQUWXB9XUFhWCVVHCkpYBwUGUgUXXE5UAVkGWAJFCEoCVFFQCFFNC0lRVVVTWwVMDEk=', "badjatiya")
+ //    headers["Authorization"] = `${token}`;
 
 	//////////////////////////////////////
 	//// gemini token
 	//////////////////////////////////////
-	// const token = decryptToken('IygeCzINKjEpARE9Ly8zBjwkFgAyWC8gHgwVICk2BzAcJCBVPQgL', 'badjatiya');
-    // headers["X-goog-api-key"] = `${token}`;
+	const token = decryptToken('IygeCzINKjEpARE9Ly8zBjwkFgAyWC8gHgwVICk2BzAcJCBVPQgL', 'badjatiya');
+    headers["X-goog-api-key"] = `${token}`;
 
 	
 	try {
