@@ -202,6 +202,7 @@ async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
         // "Authorization": "Bearer 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",
 		// "X-goog-api-key": "xxxxxxxxxxxxxxxx",
 
+        'Access-Control-Allow-Origin': '*',
 		"HTTP-Referer": "pinkeshbadjatiya.github.io",
         "X-Title": "Pinkesh Badjatiya Homepage"
     };
