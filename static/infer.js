@@ -119,7 +119,7 @@ const generatePrompt = (userQuestion, websiteContent, chatHistory) => {
         // "model": "meta-llama/llama-3.1-8b-instruct:free",
         //// "model": "microsoft/phi-3-mini-128k-instruct:free",
         //// "model": "google/gemini-2.0-flash-exp:free",
-		"model": "google/gemma-3-4b-it:free",
+		"model": "google/gemini-2.5-flash",
 
         // "model": "Meta-Llama-3.1-8B-Instruct",
 
@@ -195,30 +195,37 @@ const generatePromptGemini = (userQuestion, websiteContent, chatHistory) => {
 
 
 async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
-    // const url = "https://openrouter.ai/api/v1/chat/completions";
+    const url = "https://openrouter.ai/api/v1/chat/completions";
     // const url = "https://api.sambanova.ai/v1/chat/completions";
-	const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
-    const headers = {
+	// const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
+
+	const headers = {
         // "Authorization": "Bearer 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",
 		// "X-goog-api-key": "xxxxxxxxxxxxxxxx",
 
-        'Access-Control-Allow-Origin': '*',
 		"HTTP-Referer": "pinkeshbadjatiya.github.io",
         "X-Title": "Pinkesh Badjatiya Homepage"
     };
     
-	// const data = generatePrompt(userQuestion, websiteContent, chatHistory);
-	const data = generatePromptGemini(userQuestion, websiteContent, chatHistory);
+	const data = generatePrompt(userQuestion, websiteContent, chatHistory);
+	// const data = generatePromptGemini(userQuestion, websiteContent, chatHistory);
 	
 	console.log(data);
 
-    // const token = decryptToken('IAQFGAQGSUECWgBcUllARBtWAFlJXgdHX1RYUAMFR1IQCEtWAAQBWllEUQ==', 'badjatiya');
-    //// const token = decryptToken('IAQFGAQGSQoKTw4WRxdFRBtTB1JXXlMXXktWUlkACQUWXB9XUFhWCVVHCkpYBwUGUgUXXE5UAVkGWAJFCEoCVFFQCFFNC0lRVVVTWwVMDEk=', "badjatiya")
-    //// headers["Authorization"] = `${token}`;
 
-	// gemini token
-	const token = decryptToken('IygeCzINKjEpARE9Ly8zBjwkFgAyWC8gHgwVICk2BzAcJCBVPQgL', 'badjatiya');
-    headers["X-goog-api-key"] = `${token}`;
+	// const token = decryptToken('IAQFGAQGSUECWgBcUllARBtWAFlJXgdHX1RYUAMFR1IQCEtWAAQBWllEUQ==', 'badjatiya');
+	
+	//////////////////////////////////////
+	//// Open Router
+	//////////////////////////////////////
+	const token = decryptToken('IAQFGAQGSQoKTw4WRxdFRBtTB1JXXlMXXktWUlkACQUWXB9XUFhWCVVHCkpYBwUGUgUXXE5UAVkGWAJFCEoCVFFQCFFNC0lRVVVTWwVMDEk=', "badjatiya")
+    headers["Authorization"] = `${token}`;
+
+	//////////////////////////////////////
+	//// gemini token
+	//////////////////////////////////////
+	// const token = decryptToken('IygeCzINKjEpARE9Ly8zBjwkFgAyWC8gHgwVICk2BzAcJCBVPQgL', 'badjatiya');
+    // headers["X-goog-api-key"] = `${token}`;
 
 	
 	try {
