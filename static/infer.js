@@ -119,7 +119,8 @@ const generatePrompt = (userQuestion, websiteContent, chatHistory) => {
         // "model": "meta-llama/llama-3.1-8b-instruct:free",
         //// "model": "microsoft/phi-3-mini-128k-instruct:free",
         //// "model": "google/gemini-2.0-flash-exp:free",
-		"model": "google/gemini-2.5-flash",
+		// "model": "google/gemini-2.5-flash",
+		"model": "google/gemma-3-4b-it:free",
 
         // "model": "Meta-Llama-3.1-8B-Instruct",
 
