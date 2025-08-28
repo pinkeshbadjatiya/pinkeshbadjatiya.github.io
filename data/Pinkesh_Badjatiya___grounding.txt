@@ -16,7 +16,7 @@ I spend most of my time reading books. I also spend my spare time pursuing my ch
 
 
 ### Past Work Experience ###
-1. Applied Scientist 2 at Microsoft (Sept ’21 - Current (3 years))
+1. **Applied Scientist 2** at Microsoft (Oct 2021 - August 2025 (3 years, 10 months))
   - Working with the PeopleAlsoAsk Team @Bing, STCI where I focus on Building, Productionizing and Scaling Machine Learning systems for Bing users while maximizing DAU & User Experience, with Web-ready latency (<10ms).
 - Core Impact
   - Performed various LLMs Quantization & Optimization techniques to reduce latencies and increase throughputs.
@@ -37,7 +37,7 @@ I spend most of my time reading books. I also spend my spare time pursuing my ch
   - Mentored 3+ internship projects.
 
 
-2. Machine Learning Researcher at Adobe (June ’19 - Sept ’21 (2 yrs 4 months))
+2. **Machine Learning Researcher** at Adobe (June ’19 - Sept ’21 (2 yrs 4 months))
 - Researcher @Media and Data Science Research (MDSR) Lab - a BU embedded research group in Digital Marketing at Adobe.
 - Few-Shot Learning to 1-shot learning for banner tagging for websites; (abstract, human, non-human) for personalizing the banner ad on website; Obtained ∼ 94% Top-1 accuracy and deployed the model to production; Project for Samsung.
 - Image Editing w/ GAN: Image editing & interpolation using GANs; worked on GAN framework (extended StyleGAN-2) for generating interpolations across attributes like gender, age, smile, and eyeglasses; proposed a new interpolation strategy; collaborated with core Adobe Photoshop team to replace the existing StyleGan-2 Model; Filed a patent.
