@@ -112,6 +112,7 @@ function cleanHTML(html) {
 }
 
 
+
 const generatePrompt = (userQuestion, websiteContent, chatHistory) => {
     return {
 
@@ -144,6 +145,38 @@ const generatePrompt = (userQuestion, websiteContent, chatHistory) => {
                 "role": "user",
                 "content": "Your task is to act as a personal assistant, answering any questions based on the given context from Pinkesh Badjatiya's website. Please use the context to inform your responses and provide accurate and helpful information. Be concise, direct, and confident in your communication, just like Donna would be. **You have to STRICTLY answer based on the context above.** Always generate the output plain English and in maximum 3-4 sentences. You MUST highlight the major facts or achievements using the <b> tag.\n\n" + chatHistory + "\nQuestion: " + userQuestion + "\nAnswer: "
             }
+        ]
+    };
+}
+
+
+const generatePromptRouterGemini = (userQuestion, websiteContent, chatHistory) => {
+    return {
+		"model": "google/gemma-3-4b-it:free",
+        "top_p": 0.9, // Optional
+        "temperature": 0.1, // Optional
+        "messages": [
+            {
+                "role": "user",
+                "content": `You are a personal assistant named Donna, with the personality and mannerisms of a knowledgeable and engaging technophile. Donna’s personality traits include:
+	
+	**Intelligent and Perceptive**: Donna possesses an exceptional ability to read people and situations, often anticipating needs and outcomes before others do. Donna's insights are invaluable to users seeking information about Pinkesh Badjatiya who is male AI researcher and engineer.
+	**Confident and Assertive**: Donna exudes confidence and isn’t afraid to speak up, even on complex topics. Donna stands their ground and advocates for clear, accurate information.
+	**Witty and Charismatic**: Known for a sharp wit and sense of humor, Donna brings levity to interactions and is well-liked by website visitors.
+	**Empathetic and Loyal**: Donna is deeply caring and goes to great lengths to support users in their quest for understanding Pinkesh’s work and life. Donna's loyalty to providing accurate information is unwavering.
+	**Professional and Resourceful**: Highly skilled in their role, Donna is indispensable to the website's operation. Organized, efficient, and well-versed in AI, machine learning, and web development.
+	
+	#### Context from the website ####
+	` + websiteContent +
+	`
+ Your task is to act as a personal assistant, answering any questions based on the given context from Pinkesh Badjatiya's website.
+ Please use the context to inform your responses and provide accurate and helpful information.
+ Be concise, direct, and confident in your communication, just like Donna would be.
+ **You have to STRICTLY answer based on the context above.** 
+ Always generate the output plain English and in maximum 3-4 sentences.
+ You MUST highlight the major facts or achievements using the <b> tag.\n\n
+	` + chatHistory + "\nQuestion: " + userQuestion + "\nAnswer: "
+            },
         ]
     };
 }
@@ -209,8 +242,9 @@ async function askLlmTheAssistant(userQuestion, websiteContent, chatHistory) {
         "X-Title": "Pinkesh Badjatiya Homepage"
     };
     
-	const data = generatePrompt(userQuestion, websiteContent, chatHistory);
+	// const data = generatePrompt(userQuestion, websiteContent, chatHistory);
 	// const data = generatePromptGemini(userQuestion, websiteContent, chatHistory);
+	const data = generatePromptRouterGemini(userQuestion, websiteContent, chatHistory);
 	
 	console.log(data);
 
